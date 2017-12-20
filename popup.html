@@ -12,17 +12,23 @@
       body {
         margin: 10px;
         white-space: nowrap;
+        width: 500px;
+        height: 700px;
+        text-align: center;
       }
 
       h1 {
         font-size: 15px;
       }
 
+
       #container {
         align-items: center;
         display: flex;
         justify-content: space-between;
+        text-align: center;
       }
+
     </style>
 
     <!--
@@ -31,13 +37,22 @@
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
     -->
-    <script src="popup.js"></script>
+    <script src="scripts/popup.js"></script>
   </head>
 
   <body>
     <h1>FNG Server Status</h1>
     <div class="container">
-      <iframe src="https://fearnixx.de/status/public/" width="700px" height="800px"></iframe>
+      <h2>Menü: </h2>
+      <select id="droptdown">
+        <option value="root">Root Server</option>
+        <option value="game">Game Server</option>
+        <option value="ts">Teamspeak</option>
+      </select>
+      <!--<iframe src="https://fearnixx.de/status/public/" width="700px" height="800px"></iframe>-->
+    </div>
+    <div class="body">
+
     </div>
   </body>
 </html>

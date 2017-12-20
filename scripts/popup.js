@@ -1,10 +1,10 @@
 
 /**
- * Get the current URL.
- *
- * @param {function(string)} callback called when the URL of the current tab
- *   is found.
- */
+* Get the current URL.
+*
+* @param {function(string)} callback called when the URL of the current tab
+*   is found.
+*/
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
@@ -13,7 +13,7 @@ function getCurrentTabUrl(callback) {
     currentWindow: true
   };
 
-  chrome.tabs.query(queryInfo, (tabs) => {
+  chrome.tabs.query({'active':true} ,queryInfo, (tabs) => {
     // chrome.tabs.query invokes the callback with a list of tabs that match the
     // query. When the popup is opened, there is certainly a window and at least
     // one tab, so we can safely assume that |tabs| is a non-empty array.
@@ -42,4 +42,28 @@ function getCurrentTabUrl(callback) {
   //   url = tabs[0].url;
   // });
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
+}
+
+
+function serverChoice(){
+
+  var server = chrome.tabs.get(getElementById(droptdown));
+  var croot = "uno" ;
+  var cgame = "dos";
+  var cts = "tress";
+
+  if (server == root) {
+    chrome.tabs.popup.write(croot);
+  }
+  if (server == game) {
+    chrome.tabs.popup.write(cgame);
+  }
+  if (server == ts) {
+    chrome.tabs.popup.write(cts);
+  }
+  else {
+    chrome.tabs.popup.write("An error accured");
+    window.open("https://fearnixx.de");
+  }
+
 }
