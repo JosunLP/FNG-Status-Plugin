@@ -44,26 +44,28 @@ function getCurrentTabUrl(callback) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
+//server choice is still in work
+//function serverChoice(){
 
-function serverChoice(){
+  //var server = chrome.tabs.onUpdated.addListener();
+  //var server = "toor";
+  //var croot = "uno" ;
+  //var cgame = "dos";
+  //var cts = "tress";
 
-  var server = chrome.tabs.get(getElementById(droptdown));
-  var croot = "uno" ;
-  var cgame = "dos";
-  var cts = "tress";
+  //if (server == "root") {
+    //chrome.tabs.popup.write(croot);
+  //}
+  //if (server == "game") {
+    //chrome.tabs.popup.write(cgame);
+  //}
+  //if (server == "ts") {
+    //chrome.tabs.popup.write(cts);
+  //}
+  //else {
+    //chrome.tabs.popup.write("An error accured");
+    //window.open("https://fearnixx.de");
+  //}
 
-  if (server == root) {
-    chrome.tabs.popup.write(croot);
-  }
-  if (server == game) {
-    chrome.tabs.popup.write(cgame);
-  }
-  if (server == ts) {
-    chrome.tabs.popup.write(cts);
-  }
-  else {
-    chrome.tabs.popup.write("An error accured");
-    window.open("https://fearnixx.de");
-  }
-
-}
+//}
+//serverChoice();
