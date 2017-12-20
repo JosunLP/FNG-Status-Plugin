@@ -1,58 +1,61 @@
 <!doctype html>
 <!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
+This page is shown when the extension button is clicked, because the
+"browser_action" field in manifest.json contains the "default_popup" key with
+value "popup.html".
+-->
 <html>
-  <head>
-    <title>FearNixx Server Status</title>
-    <meta name="charset" charset="utf-8">
-    <style type="text/css">
-      body {
-        margin: 10px;
-        white-space: nowrap;
-        width: 500px;
-        height: 700px;
-        text-align: center;
-      }
+<head>
+  <title>FearNixx Server Status</title>
+  <meta name="charset" charset="utf-8">
+  <style type="text/css">
+  body {
+    margin: 10px;
+    white-space: nowrap;
+    width: 400px;
+    height: 270px;
+    text-align: center;
+  }
 
-      h1 {
-        font-size: 15px;
-      }
+  h1 {
+    font-size: 15px;
+  }
 
 
-      #container {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-      }
+  #container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
 
-    </style>
+  </style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-    -->
+  <!--
+  - JavaScript and HTML must be in separate files: see our Content Security
+  - Policy documentation[1] for details and explanation.
+  -
+  - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+-->
 
-  </head>
+</head>
 
-  <body>
-    <h1>FNG Server Status</h1>
-    <div class="container">
-      <!--<h2>Menü: </h2>
-      <select id="droptdown">
-        <option value="root">Root Server</option>
-        <option value="game">Game Server</option>
-        <option value="ts">Teamspeak</option>
-      </select>-->
-      <!--<iframe src="https://fearnixx.de/status/public/" width="700px" height="800px"></iframe>-->
-      
+<body>
+  <h1>FNG Server Status</h1>
+  <div class="container">
+    <!--<h2>Menü: </h2>
+    <select id="droptdown">
+    <option value="root">Root Server</option>
+    <option value="game">Game Server</option>
+    <option value="ts">Teamspeak</option>
+  </select>-->
+  <!--<iframe src="https://fearnixx.de/status/public/" width="600px" height="800px"></iframe>-->
 
-    </div>
-    <script src="scripts/popup.js"></script>
-  </body>
+  
+  <p>Klicke <a href="https://fearnixx.de/status/public/subscribe" target="_blank">hier</a>, um E-Mails zu erhalten, wenn sich ein Dienst-Status ändert.</p>
+
+
+</div>
+<script src="scripts/popup.js"></script>
+</body>
 </html>

@@ -47,25 +47,42 @@ function getCurrentTabUrl(callback) {
 //server choice is still in work
 //function serverChoice(){
 
-  //var server = chrome.tabs.onUpdated.addListener();
-  //var server = "toor";
-  //var croot = "uno" ;
-  //var cgame = "dos";
-  //var cts = "tress";
+//var server = chrome.tabs.onUpdated.addListener();
+//var server = "toor";
+//var croot = "uno" ;
+//var cgame = "dos";
+//var cts = "tress";
 
-  //if (server == "root") {
-    //chrome.tabs.popup.write(croot);
-  //}
-  //if (server == "game") {
-    //chrome.tabs.popup.write(cgame);
-  //}
-  //if (server == "ts") {
-    //chrome.tabs.popup.write(cts);
-  //}
-  //else {
-    //chrome.tabs.popup.write("An error accured");
-    //window.open("https://fearnixx.de");
-  //}
+//if (server == "root") {
+//chrome.tabs.popup.write(croot);
+//}
+//if (server == "game") {
+//chrome.tabs.popup.write(cgame);
+//}
+//if (server == "ts") {
+//chrome.tabs.popup.write(cts);
+//}
+//else {
+//chrome.tabs.popup.write("An error accured");
+//window.open("https://fearnixx.de");
+//}
 
 //}
 //serverChoice();
+
+function pingReq() {
+  var data = JSON.stringify(false);
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      console.log(this.responseText);
+    }
+  });
+
+  xhr.open("GET", "https://fearnixx.de/status/public/api/v1/ping");
+
+  xhr.send(data);
+}
