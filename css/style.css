@@ -1,0 +1,45 @@
+body {
+  margin: 10px;
+  white-space: nowrap;
+  width: 400px;
+  height: 270px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+
+#container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#headlines {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+h3 {
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1rem;
+  padding: 10px;
+}
+#content {
+
+}
+
+
+       ____.               __   _________ __                _______                              .__
+      |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+      |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
+  /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
+  \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
+                      \/              \/           \/\/            \/                   \/     \/
