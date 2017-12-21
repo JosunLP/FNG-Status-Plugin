@@ -86,3 +86,4 @@ function pingReq() {
 
   xhr.send(data);
 }
+
