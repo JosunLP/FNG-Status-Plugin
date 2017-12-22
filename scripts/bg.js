@@ -1,18 +1,19 @@
 
-  var data = JSON.stringify(false);
+var data = JSON.stringify(false);
 
-  var xhr = new XMLHttpRequest();
-  xhr.withCredentials = true;
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
 
-  xhr.addEventListener("readystatechange", function () {
-    if (this.readyState === this.DONE) {
-      console.log(this.responseText);
-    }
-  });
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === this.DONE) {
+    console.log(this.responseText);
+  }
+});
 
-  xhr.open("GET", "https://fearnixx.de/status/public/api/v1/components?sort=status&order=desc");
+xhr.open("GET", "https://fearnixx.de/status/public/api/v1/components?sort=status&order=desc");
 
-  xhr.send(data);
+xhr.send(data);
+
 
 
 
@@ -48,6 +49,7 @@
 //}
 
 //}
+
 
 //        ____.               __   _________ __                _______                              .__
 //       |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
