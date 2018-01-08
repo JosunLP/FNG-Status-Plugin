@@ -21,38 +21,8 @@ xhr.send(data);
 
 
 
-
-
-
-
-//server choice is still in work
-//function serverChoice(){
-
-//var server = chrome.tabs.onUpdated.addListener();
-//var server = "toor";
-//var croot = "uno" ;
-//var cgame = "dos";
-//var cts = "tress";
-
-//if (server == "root") {
-//chrome.tabs.popup.write(croot);
-//}
-//if (server == "game") {
-//chrome.tabs.popup.write(cgame);
-//}
-//if (server == "ts") {
-//chrome.tabs.popup.write(cts);
-//}
-//else {
-//chrome.tabs.popup.write("An error accured");
-//window.open("https://fearnixx.de");
-//}
-
-//}
-
-
-//        ____.               __   _________ __                _______                              .__
-//       |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+//       ____.               __   _________ __                _______                              .__
+//      |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
 //      |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
 //  /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
 //  \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
