@@ -47,7 +47,24 @@ function getCurrentTabUrl(callback) {
 }
 
 
-//serverChoice();
+function getDataInfos() {
+  var data = JSON.stringify(false);
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      console.log(this.responseText);
+    }
+  });
+
+
+  xhr.open("GET", "https://fearnixx.de/status/public/api/v1/components?sort=status&order=desc");
+
+  xhr.send(data);
+}
+
 
 
  //       ____.               __   _________ __                _______                              .__
