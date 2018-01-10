@@ -46,6 +46,15 @@ function getCurrentTabUrl(callback) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
+function postOfLife() {
+  var HelloWorld = "JustStayNormal Dude";
+  for (var i = 0; i < 100; i++) {
+    console.log(HelloWorld);
+    var i = 100;
+  }
+}
+
+
 
 function getDataInfos() {
   var data = JSON.stringify(false);
@@ -56,6 +65,7 @@ function getDataInfos() {
   xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
       console.log(this.responseText);
+      window.alert(this.responseText);
     }
   });
 
@@ -65,6 +75,20 @@ function getDataInfos() {
   xhr.send(data);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+postOfLife();
+getDataInfos();
 
 
  //       ____.               __   _________ __                _______                              .__
