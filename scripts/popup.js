@@ -5,6 +5,8 @@
 * @param {function(string)} callback called when the URL of the current tab
 *   is found.
 */
+
+
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
@@ -44,28 +46,54 @@ function getCurrentTabUrl(callback) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
-//server choice is still in work
-//function serverChoice(){
+function postOfLife() {
+  var HelloWorld = "JustStayNormal Dude";
+  for (var i = 0; i < 100; i++) {
+    console.log(HelloWorld);
+    var i = 100;
+  }
+}
 
-  //var server = chrome.tabs.onUpdated.addListener();
-  //var server = "toor";
-  //var croot = "uno" ;
-  //var cgame = "dos";
-  //var cts = "tress";
 
-  //if (server == "root") {
-    //chrome.tabs.popup.write(croot);
-  //}
-  //if (server == "game") {
-    //chrome.tabs.popup.write(cgame);
-  //}
-  //if (server == "ts") {
-    //chrome.tabs.popup.write(cts);
-  //}
-  //else {
-    //chrome.tabs.popup.write("An error accured");
-    //window.open("https://fearnixx.de");
-  //}
 
-//}
-//serverChoice();
+function getDataInfos() {
+  var data = JSON.stringify(false);
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      console.log(this.responseText);
+      window.alert(this.responseText);
+    }
+  });
+
+
+  xhr.open("GET", "https://fearnixx.de/status/public/api/v1/components?sort=status&order=desc");
+
+  xhr.send(data);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+postOfLife();
+getDataInfos();
+
+
+ //       ____.               __   _________ __                _______                              .__
+ //      |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+ //      |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
+//   /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
+//   \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
+//                       \/              \/           \/\/            \/                   \/     \/
