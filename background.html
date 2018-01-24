@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>background page</title>
-    <script type="text/javascript" src="scripts/bg.js"></script>
-  </head>
-  <body>
-    <main>
-      <form class="help" action="#" method="post">
-        <label for="name">Name: </label>
-        <input type="text" name="name" value="Bitte Namen eingeben">
-        <label for="email">Eamil: </label>
-        <input type="email" name="email" value="Bitte Email eingeben">
-        <label for="message">Nachricht: </label>
-        <input type="text" name="message" value="Bitte Nachricht eingeben">
-      </form>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>background page</title>
+  <script type="text/javascript" src="scripts/bg.js"></script>
+</head>
+<body>
+  <main>
+    <!--You need to link the URL of your mail.php-->
+    <form method="post" action="http://yourdomain.test/mail.php">
+      <table border="0" summary="">
+        <tr>
+          <td>Email:</td>
+          <td><input type="email" name="from"/></td>
+        </tr>
+        <tr>
+          <td>Betreff:</td>
+          <td><input type="text" name="betreff"/></td>
+        </tr>
+        <tr>
+          <td>Text:</td>
+          <td><textarea name="inhalt"></textarea></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td><input type="submit" name="submit" value="Versenden"/></td>
+        </tr>
+
+        <tr>
+          <td>Zurück zur APP</td>
+          <td> <a href="popup.html"> <button type="button" name="button"> <-- </button> </a> </td>
+        </tr>
+
+      </table>
+    </form>
+  </main>
+</body>
 </html>
