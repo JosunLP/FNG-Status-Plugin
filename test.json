@@ -1,0 +1,126 @@
+{
+   "meta": {
+      "pagination": {
+         "total": 6,
+         "count": 6,
+         "per_page": 20,
+         "current_page": 1,
+         "total_pages": 1,
+         "links": {
+            "next_page": null,
+            "previous_page": null
+         }
+      }
+   },
+   "data": [
+      {
+         "id": 5,
+         "name": "Minecraft-Technik",
+         "description": "Unser modifizierter Minecraft Technik-Server",
+         "link": "https://fearnixx.de/minecraft/",
+         "status": 4,
+         "order": 5,
+         "group_id": 3,
+         "enabled": true,
+         "created_at": "2017-04-19 15:48:28",
+         "updated_at": "2017-04-19 15:49:32",
+         "deleted_at": null,
+         "status_name": "Schwerer Ausfall",
+         "tags": {
+            "minecraft": "minecraft",
+            "technik": "technik"
+         }
+      },
+      {
+         "id": 6,
+         "name": "Arma 3 - Life",
+         "description": "Unser Arma 3 server mit eigener Arma-Life Mission.",
+         "link": "",
+         "status": 3,
+         "order": 6,
+         "group_id": 3,
+         "enabled": true,
+         "created_at": "2017-04-19 15:49:27",
+         "updated_at": "2017-05-11 12:03:45",
+         "deleted_at": null,
+         "status_name": "Teilweiser Ausfall",
+         "tags": {
+            "arma": "arma",
+            "arma3": "arma3",
+            "antistasi": "antistasi"
+         }
+      },
+      {
+         "id": 1,
+         "name": "Forum",
+         "description": "Unsere Website und zugleich unser Forum.",
+         "link": "https://fearnixx.de",
+         "status": 1,
+         "order": 1,
+         "group_id": 1,
+         "enabled": true,
+         "created_at": "2017-04-19 15:40:09",
+         "updated_at": "2017-04-19 15:49:32",
+         "deleted_at": null,
+         "status_name": "Funktionsfähig",
+         "tags": {
+            "forum": "forum",
+            "website": "website"
+         }
+      },
+      {
+         "id": 2,
+         "name": "TeamSpeak 3",
+         "description": "Unser TeamSpeak 3 server.",
+         "link": "https://fearnixx.de/ts3/",
+         "status": 1,
+         "order": 2,
+         "group_id": 2,
+         "enabled": true,
+         "created_at": "2017-04-19 15:43:43",
+         "updated_at": "2017-05-10 22:12:16",
+         "deleted_at": null,
+         "status_name": "Funktionsfähig",
+         "tags": {
+            "ts3": "ts3",
+            "voice": "voice"
+         }
+      },
+      {
+         "id": 3,
+         "name": "BungeeCord",
+         "description": "Unser BungeeCord server. Hierüber werden die MC-Server verbunden.\r\nWenn nur dieser offline ist, geht ein direktes Beitreten evtl. noch.",
+         "link": "https://fearnixx.de/minecraft/",
+         "status": 1,
+         "order": 3,
+         "group_id": 3,
+         "enabled": true,
+         "created_at": "2017-04-19 15:45:22",
+         "updated_at": "2017-05-11 11:35:01",
+         "deleted_at": null,
+         "status_name": "Funktionsfähig",
+         "tags": {
+            "minecraft": "minecraft",
+            "bungee": "bungee"
+         }
+      },
+      {
+         "id": 4,
+         "name": "Minecraft-Vanilla",
+         "description": "Unser Minecraft-Vanilla server.",
+         "link": "https://fearnixx.de/minecraft/",
+         "status": 1,
+         "order": 4,
+         "group_id": 3,
+         "enabled": true,
+         "created_at": "2017-04-19 15:47:49",
+         "updated_at": "2017-05-11 11:45:01",
+         "deleted_at": null,
+         "status_name": "Funktionsfähig",
+         "tags": {
+            "minecraft": "minecraft",
+            "vanilla": "vanilla"
+         }
+      }
+   ]
+}
