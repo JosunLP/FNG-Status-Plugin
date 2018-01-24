@@ -6,8 +6,8 @@ html {
 body {
   margin: 10px;
   white-space: nowrap;
-  width: 400px;
-  height: 270px;
+  width: 500px;
+  height: 500px;
   text-align: center;
   border-style: inset;
   border-width: 7px;
@@ -35,17 +35,24 @@ h1 {
   text-align: center;
 }
 
-h3 {
-  display: inline-block;
-  border-style: solid;
-  border-color: black;
-  border-width: 0.1rem;
-  padding: 10px;
+table {
+  font-size: 1rem;
+  color: white;
+  margin: 5%;
 }
+
+th {
+  margin: 10%;
+  border-style: solid;
+  border-color: white;
+  padding: 4px;
+}
+
 footer {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  margin-bottom: 0px;
 }
 
 article {
