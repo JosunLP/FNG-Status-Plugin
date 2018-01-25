@@ -6,7 +6,7 @@ html {
 body {
   margin: 10px;
   white-space: nowrap;
-  width: 500px;
+  width: 700px;
   height: 500px;
   text-align: center;
   border-style: inset;
@@ -16,19 +16,30 @@ body {
   background-color: #539CFF;
 }
 
-h1 {
-  font-size: 15px;
+.logo {
+  margin-left: -300px;
+  margin-bottom: 0;
+  position: absolute;
+
 }
 
+h1 {
+  font-size: 32px;
+  color: white;
+}
 
-#container {
+p, a{
+  color:white;
+}
+
+.container {
   align-items: center;
   display: flex;
   justify-content: space-between;
   text-align: center;
 }
 
-#headlines {
+.headlines {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -38,7 +49,21 @@ h1 {
 table {
   font-size: 1rem;
   color: white;
-  margin: 5%;
+  margin-left:10%;
+  margin-top: 4%;
+}
+
+button {
+  background-color: #5363FF;
+  border-color: #5363FF;
+  height: 30px;
+  width: 100px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  color: white;
+  font-size: 10px;
 }
 
 th {
@@ -46,18 +71,27 @@ th {
   border-style: solid;
   border-color: white;
   padding: 4px;
+  width: 180px;
+  max-width: 180px;
+  min-width: 180px;
+}
+
+td {
+  padding-bottom: 40px;
 }
 
 footer {
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  position: absolute;
 }
 
 article {
   display: inline-block;
 }
+
 
 
     ____.               __   _________ __                _______                              .__

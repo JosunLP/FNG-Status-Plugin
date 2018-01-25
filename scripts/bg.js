@@ -20,8 +20,15 @@ xhr.send(data);
 //var type ids
 var stroot = document.getElementById('root');
 var stts = document.getElementById('ts');
-var stgame = document.getElementById('game');
 var stwebsite = document.getElementById('website');
+var stmcv = document.getElementById('mcv');
+var stmct = document.getElementById('mct');
+var stmcm = document.getElementById('mcm');
+var stttt1 = document.getElementById('ttt1');
+var stttt2 = document.getElementById('ttt2');
+var stttt3 = document.getElementById('ttt3');
+
+
 
 //var type infos
 //var clroot = ;
@@ -30,13 +37,18 @@ var stwebsite = document.getElementById('website');
 //var clwebsite = ;
 
 
-console.log(stroot.innerHTML, stts.innerHTML, stgame.innerHTML, stwebsite.innerHTML);
+console.log(stroot.innerHTML, stts.innerHTML, stwebsite.innerHTML);
 
 if (this.readyState === this.DONE) {
-  stroot.innerHTML = "Test1";
-  stts.innerHTML = "Test2";
-  stgame.innerHTML = "Test3";
-  stwebsite.innerHTML = "Test4";
+  stroot.innerHTML = "Status1";
+  stts.innerHTML = "Status2";
+  stwebsite.innerHTML = "Status3";
+  stmcv.innerHTML = "Status4";
+  stmct.innerHTML = "Status5";
+  stmcm.innerHTML = "Status6";
+  stttt1.innerHTML = "Status7";
+  stttt2.innerHTML = "Status8";
+  stttt3.innerHTML = "Status9";
 }
 
 

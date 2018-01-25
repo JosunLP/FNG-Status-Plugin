@@ -21,8 +21,9 @@ value "popup.html".
 </head>
 
 <body>
+  <img src="icon128.png" alt="logo" class="logo">
   <h1>FNG Server Status</h1>
-  <strong style="color:white;">THIS APP IS IN MAINTANCE MODE AND NOT FINISHED</strong>
+  <strong style="color:white;visibility: hidden;">THIS APP IS IN MAINTANCE MODE AND NOT FINISHED</strong>
   <div class="container">
 
     <!--<iframe src="https://fearnixx.de/status/public/" width="400px" height="800px"></iframe>-->
@@ -32,14 +33,32 @@ value "popup.html".
         <thead>
           <th>Root Server</th>
           <th>Teamspeak Server</th>
-          <th>Game Server</th>
           <th>Webside</th>
         </thead>
         <tbody>
-          <td id="root">#STATE</td>
-          <td id="ts">#STATE</td>
-          <td id="game">#STATE</td>
-          <td id="website">#STATE</td>
+          <td id="root">#ERROR</td>
+          <td id="ts">#ERROR</td>
+          <td id="website">#ERROR</td>
+        </tbody>
+        <thead>
+          <th>Minecraft Vanilla</th>
+          <th>Minecraft Technik</th>
+          <th>Minecraft Minnigames</th>
+        </thead>
+        <tbody>
+          <td id="mcv">#ERROR</td>
+          <td id="mct">#ERROR</td>
+          <td id="mcm">#ERROR</td>
+        </tbody>
+        <thead>
+          <th>TTT 01</th>
+          <th>TTT 02</th>
+          <th>TTT 03</th>
+        </thead>
+        <tbody>
+          <td id="ttt1">#ERROR</td>
+          <td id="ttt2">#ERROR</td>
+          <td id="ttt3">#ERROR</td>
         </tbody>
       </table>
 
@@ -49,16 +68,17 @@ value "popup.html".
       <div id="item">
 
       </div>
-      <img src="images/Gear.gif" alt="loading">
+
     </section>
 
 
 
   </div>
   <footer>
+
       <script type="text/javascript" src="scripts/bg.js"></script>
-    <a href="background.html">Kontakt Formular</a>
-    <p>Klicke <a href="https://fearnixx.de/status/public/subscribe" target="_blank">hier</a>, um E-Mails zu erhalten, wenn sich ein Dienst-Status ändert.</p>
+    <a href="background.html"> <button type="button" name="button">Kontakt Formular</button> </a>
+    <p class="bottom">Klicke <a href="https://fearnixx.de/status/public/subscribe" target="_blank">hier</a>, um E-Mails zu erhalten, wenn sich ein Dienst-Status ändert.</p>
   </footer>
 </body>
 <signature>
