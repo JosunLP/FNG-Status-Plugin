@@ -1,0 +1,102 @@
+html {
+  background-color: #5363FF;
+  margin-left: 0;
+  padding: 0;
+}
+body {
+  margin: 10px;
+  white-space: nowrap;
+  width: 700px;
+  height: 500px;
+  text-align: center;
+  border-style: inset;
+  border-width: 7px;
+  border-color: #539CFF;
+  margin: 1;
+  background-color: #539CFF;
+}
+
+.logo {
+  margin-left: -300px;
+  margin-bottom: 0;
+  position: absolute;
+
+}
+
+h1 {
+  font-size: 32px;
+  color: white;
+}
+
+p, a{
+  color:white;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.headlines {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+table {
+  font-size: 1rem;
+  color: white;
+  margin-left:10%;
+  margin-top: 4%;
+}
+
+button {
+  background-color: #5363FF;
+  border-color: #5363FF;
+  height: 30px;
+  width: 100px;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  color: white;
+  font-size: 10px;
+}
+
+th {
+  margin: 10%;
+  border-style: solid;
+  border-color: white;
+  padding: 4px;
+  width: 180px;
+  max-width: 180px;
+  min-width: 180px;
+}
+
+td {
+  padding-bottom: 40px;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  position: absolute;
+}
+
+article {
+  display: inline-block;
+}
+
+
+
+    ____.               __   _________ __                _______                              .__
+    |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+    |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
+/\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
+\________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
+  \/              \/           \/\/            \/                   \/     \/

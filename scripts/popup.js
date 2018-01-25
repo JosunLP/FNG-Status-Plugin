@@ -5,6 +5,8 @@
 * @param {function(string)} callback called when the URL of the current tab
 *   is found.
 */
+
+
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
@@ -44,28 +46,15 @@ function getCurrentTabUrl(callback) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
-//server choice is still in work
-//function serverChoice(){
 
-  //var server = chrome.tabs.onUpdated.addListener();
-  //var server = "toor";
-  //var croot = "uno" ;
-  //var cgame = "dos";
-  //var cts = "tress";
 
-  //if (server == "root") {
-    //chrome.tabs.popup.write(croot);
-  //}
-  //if (server == "game") {
-    //chrome.tabs.popup.write(cgame);
-  //}
-  //if (server == "ts") {
-    //chrome.tabs.popup.write(cts);
-  //}
-  //else {
-    //chrome.tabs.popup.write("An error accured");
-    //window.open("https://fearnixx.de");
-  //}
 
-//}
-//serverChoice();
+
+
+
+ //       ____.               __   _________ __                _______                              .__
+ //      |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+ //      |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
+//   /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
+//   \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
+//                       \/              \/           \/\/            \/                   \/     \/
