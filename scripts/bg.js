@@ -21,6 +21,9 @@ xhr.addEventListener("readystatechange", function () {
     console.log(this.responseText);
     var json = this.responseText;
 
+
+  
+
     stroot.innerHTML = "Status1";
     stts.innerHTML = "Status2";
     stwebsite.innerHTML = "Status3";
