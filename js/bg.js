@@ -14,7 +14,7 @@ xhr.addEventListener("readystatechange", function () {
 
     function rocked(id, nr) {
       var temp = obj.data[nr].status_name;
-       if (temp != "Online") {
+       if (temp !== "Online") {
          $("td:first").addClass("redRocket");
        }
     }
@@ -43,7 +43,7 @@ xhr.addEventListener("readystatechange", function () {
         })
       }
     }
-    
+
 
 
   }
