@@ -101,10 +101,13 @@ article {
 
 .redRocket {
   color: red;
+  text-decoration-line: underline;
+  font-weight: bolder;
 }
 
 .greenThumb {
   color: green;
+  font-weight: bolder;
 }
 
 
