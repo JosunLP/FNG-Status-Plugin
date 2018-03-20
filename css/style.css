@@ -7,7 +7,7 @@ body {
   margin: 10px;
   white-space: nowrap;
   width: 700px;
-  height: 500px;
+  height: 800px;
   text-align: center;
   border-style: inset;
   border-width: 7px;
@@ -85,7 +85,11 @@ footer {
   left: 0;
   right: 0;
   margin-bottom: 0;
-  position: absolute;
+  position: fixed;
+  background-color: #5363FF;
+  border-top-style: inset;
+  border-top-width: 7px;
+  border-top-color: #539CFF;
 }
 
 article {

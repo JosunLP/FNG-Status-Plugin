@@ -1,16 +1,6 @@
 
 var data = JSON.parse(true);
 
-var info = document.getElementById('item');
-var stroot = document.getElementById('root');
-var stts = document.getElementById('ts');
-var stwebsite = document.getElementById('website');
-var stmcv = document.getElementById('mcv');
-var stmct = document.getElementById('mct');
-var stmcm = document.getElementById('mcm');
-var stttt1 = document.getElementById('ttt1');
-var stttt2 = document.getElementById('ttt2');
-var stttt3 = document.getElementById('ttt3');
 
 
 var xhr = new XMLHttpRequest();
@@ -20,21 +10,49 @@ xhr.addEventListener("readystatechange", function () {
   if (this.readyState === this.DONE) {
     console.log(this.responseText);
     var json = this.responseText;
+    var obj = JSON.parse(json);
+
+    if (obj.data[0].id == 1) {
+      document.querySelector("#tsbot").innerHTML =
+       obj.data[0].status_name;
+    }
+
+    if (obj.data[1].id == 2) {
+      document.querySelector("#ts").innerHTML =
+       obj.data[1].status_name;
+    }
+
+    if (obj.data[2].id == 3) {
+      document.querySelector("#tsmusi").innerHTML =
+       obj.data[2].status_name;
+    }
+
+    if (obj.data[3].id == 4) {
+
+    }
+
+    if (obj.data[4].id == 5) {
+
+    }
+
+    if (obj.data[5].id == 6) {
+
+    }
 
 
-  
 
-    stroot.innerHTML = "Status1";
-    stts.innerHTML = "Status2";
-    stwebsite.innerHTML = "Status3";
-    stmcv.innerHTML = "Status4";
-    stmct.innerHTML = "Status5";
-    stmcm.innerHTML = "Status6";
-    stttt1.innerHTML = "Status7";
-    stttt2.innerHTML = "Status8";
-    stttt3.innerHTML = "Status9";
+
+
+
+    //if (data.data[0].id == 1 && data.data[0].status == 1) {
+      //document.querySelector("#ts").innerHTML =
+        //stroot.innerHTML = "Online";
+    //}
+
+
   }
 });
+
 
 
 xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
