@@ -12,24 +12,16 @@ xhr.addEventListener("readystatechange", function () {
     var json = this.responseText;
     var obj = JSON.parse(json);
 
-    function rocked(id, nr) {
+    function globalos(id, nr) {
       var temp = obj.data[nr].status_name;
        if (temp !== "Online") {
          $("td:first").addClass("redRocket");
        }
-    }
-
-    function thumb(id, nr) {
-      var temp = obj.data[nr].status_name;
-       if (temp === "Online") {
+       else if (temp === "Online") {
          $("td:first").addClass("greenThumb");
        }
     }
 
-    function globalos(id, nr) {
-      rocked(id, nr);
-      thumb(id, nr);
-    }
 
 
     for (var i = 0; i < 15; i++) {
