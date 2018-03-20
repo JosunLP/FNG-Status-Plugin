@@ -7,7 +7,7 @@ body {
   margin: 10px;
   white-space: nowrap;
   width: 700px;
-  height: 800px;
+  height: 900px;
   text-align: center;
   border-style: solid;
   border-left-style: none;
@@ -33,13 +33,6 @@ p, a{
   color:white;
 }
 
-.container {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin-top: 125px;
-}
 
 .headlines {
   align-items: center;
@@ -49,10 +42,9 @@ p, a{
 }
 
 table {
+  margin-top: 110px;
   font-size: 1rem;
   color: white;
-  margin-left:10%;
-  margin-top: 4%;
 }
 
 button {
@@ -69,18 +61,11 @@ button {
 }
 
 th {
-  margin: 10%;
-  border-style: solid;
-  border-color: white;
-  padding: 4px;
-  width: 180px;
-  max-width: 180px;
-  min-width: 180px;
+  background-color: white;
+  color: #5363FF;
 }
 
-td {
-  padding-bottom: 40px;
-}
+
 
 footer {
   bottom: 0;
