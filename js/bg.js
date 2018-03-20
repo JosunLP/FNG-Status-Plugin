@@ -17,14 +17,14 @@ xhr.addEventListener("readystatechange", function () {
       if (temp !== "Online") {
         $("td:first").addClass("redRocket");
       }
-      else if (temp === "Online") {
+      if (temp === "Online") {
         $("td:first").addClass("greenThumb");
       }
     }
 
 
 
-    for (var i = 0; i < 15; i++) {
+  /*  for (var i = 0; i < 15; i++) {
       var idones = ["tsbot", "ts", "tsmusi", "ttt1", "ttt2", "ttt3", "swrp", "tecsold", "ptp", "ptd", "gmodweb", "tsdns", "darkrp", "mcprox", "mchub", "mctec"];
       idones.forEach(function idnonsense(idone) {
         var ido = "#" + idone;
@@ -33,8 +33,10 @@ xhr.addEventListener("readystatechange", function () {
         globalos(ido, i);
       })
     }
-
-
+*/
+      for (var i = 0; i < obj.data; i++) {
+        let component = obj.data[i];
+      }
 
   }
 });
