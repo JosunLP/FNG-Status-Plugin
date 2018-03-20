@@ -14,26 +14,24 @@ xhr.addEventListener("readystatechange", function () {
 
     function globalos(id, nr) {
       var temp = obj.data[nr].status_name;
-       if (temp !== "Online") {
-         $("td:first").addClass("redRocket");
-       }
-       else if (temp === "Online") {
-         $("td:first").addClass("greenThumb");
-       }
+      if (temp !== "Online") {
+        $("td:first").addClass("redRocket");
+      }
+      else if (temp === "Online") {
+        $("td:first").addClass("greenThumb");
+      }
     }
 
 
 
     for (var i = 0; i < 15; i++) {
-      if (obj.data[i].id === i + 1) {
-        var idones = ["tsbot", "ts", "tsmusi", "ttt1", "ttt2", "ttt3", "swrp", "tecsold", "ptp", "ptd", "gmodweb", "tsdns", "darkrp", "mcprox", "mchub", "mctec"];
-        idones.forEach(function idnonsense(idone) {
-          var ido = "#" + idone;
-          document.querySelector(ido).innerHTML =
-           obj.data[i].status_name;
-           globalos(ido, i);
-        })
-      }
+      var idones = ["tsbot", "ts", "tsmusi", "ttt1", "ttt2", "ttt3", "swrp", "tecsold", "ptp", "ptd", "gmodweb", "tsdns", "darkrp", "mcprox", "mchub", "mctec"];
+      idones.forEach(function idnonsense(idone) {
+        var ido = "#" + idone;
+        document.querySelector(ido).innerHTML =
+        obj.data[i].status_name;
+        globalos(ido, i);
+      })
     }
 
 
