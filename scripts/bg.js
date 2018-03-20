@@ -42,6 +42,56 @@ xhr.addEventListener("readystatechange", function () {
        obj.data[5].status_name;
     }
 
+    if (obj.data[6].id == 9) {
+      document.querySelector("#swrp").innerHTML =
+       obj.data[6].status_name;
+    }
+
+    if (obj.data[7].id == 10) {
+      document.querySelector("#tecsold").innerHTML =
+       obj.data[7].status_name;
+    }
+
+    if (obj.data[8].id == 11) {
+      document.querySelector("#ptp").innerHTML =
+        obj.data[8].status_name;
+    }
+
+    if (obj.data[9].id == 12) {
+      document.querySelector("#ptd").innerHTML =
+       obj.data[9].status_name;
+    }
+
+    if (obj.data[10].id == 13) {
+      document.querySelector("#gmodweb").innerHTML =
+       obj.data[10].status_name;
+    }
+
+    if (obj.data[11].id == 14) {
+      document.querySelector("#tsdns").innerHTML =
+       obj.data[11].status_name;
+    }
+
+    if (obj.data[12].id == 15) {
+      document.querySelector("#darkrp").innerHTML =
+       obj.data[12].status_name;
+    }
+
+    if (obj.data[13].id == 16) {
+      document.querySelector("#mcprox").innerHTML =
+       obj.data[13].status_name;
+    }
+
+    if (obj.data[14].id == 17) {
+      document.querySelector("#mchub").innerHTML =
+       obj.data[14].status_name;
+    }
+
+    if (obj.data[15].id == 18) {
+      document.querySelector("#mctec").innerHTML =
+       obj.data[15].status_name;
+    }
+
 
 
 
