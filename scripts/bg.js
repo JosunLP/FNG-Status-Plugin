@@ -28,15 +28,18 @@ xhr.addEventListener("readystatechange", function () {
     }
 
     if (obj.data[3].id == 4) {
-
+      document.querySelector("#ttt1").innerHTML =
+       obj.data[3].status_name;
     }
 
     if (obj.data[4].id == 5) {
-
+      document.querySelector("#ttt2").innerHTML =
+       obj.data[4].status_name;
     }
 
     if (obj.data[5].id == 6) {
-
+      document.querySelector("#ttt3").innerHTML =
+       obj.data[5].status_name;
     }
 
 
