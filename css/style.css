@@ -66,6 +66,13 @@ th {
 }
 
 
+.table .status_head,.table .status_body {
+  padding: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+
 
 footer {
   bottom: 0;

@@ -36,6 +36,7 @@ xhr.addEventListener("readystatechange", function () {
 */
       for (var i = 0; i < obj.data; i++) {
         let component = obj.data[i];
+        
       }
 
   }
