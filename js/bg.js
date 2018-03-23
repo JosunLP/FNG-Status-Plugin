@@ -36,7 +36,15 @@ xhr.addEventListener("readystatechange", function () {
 */
       for (var i = 0; i < obj.data; i++) {
         let component = obj.data[i];
+        let id = obj.data[i];
+        let name = obj.data[i].name;
+        let stat_name = obj.data[i].status_name;
+
         
+
+
+
+        globalos(id, i);
       }
 
   }
