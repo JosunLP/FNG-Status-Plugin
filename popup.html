@@ -10,6 +10,8 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.dynatable.js"></script>
+  <link rel="stylesheet" href="css/jquery.dynatable.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -24,7 +26,7 @@
     <!--<iframe src="https://fearnixx.de/status/public/" width="400px" height="800px"></iframe>-->
     <section class="headlines">
 
-      <table class="table">
+      <table class="table" id="myTable">
         <!-- each head three headlines and each body three answers!!-->
         <thead>
           <th id="hid_1" class="status_head">BSP 1</th>
@@ -36,6 +38,7 @@
           <td id="id_2" class="status_body">#ERROR</td>
           <td id="id_3" class="status_body">#ERROR</td>
         </tbody>
+
       </table>
 
     </section>

@@ -1,6 +1,6 @@
 
 var data = JSON.parse(true);
-
+//$("#laender").dynatable();
 
 
 var xhr = new XMLHttpRequest();
@@ -24,30 +24,33 @@ xhr.addEventListener("readystatechange", function () {
 
 
 
-  /*  for (var i = 0; i < 15; i++) {
-      var idones = ["tsbot", "ts", "tsmusi", "ttt1", "ttt2", "ttt3", "swrp", "tecsold", "ptp", "ptd", "gmodweb", "tsdns", "darkrp", "mcprox", "mchub", "mctec"];
-      idones.forEach(function idnonsense(idone) {
-        var ido = "#" + idone;
-        document.querySelector(ido).innerHTML =
-        obj.data[i].status_name;
-        globalos(ido, i);
-      })
-    }
+    /*  for (var i = 0; i < 15; i++) {
+    var idones = ["tsbot", "ts", "tsmusi", "ttt1", "ttt2", "ttt3", "swrp", "tecsold", "ptp", "ptd", "gmodweb", "tsdns", "darkrp", "mcprox", "mchub", "mctec"];
+    idones.forEach(function idnonsense(idone) {
+    var ido = "#" + idone;
+    document.querySelector(ido).innerHTML =
+    obj.data[i].status_name;
+    globalos(ido, i);
+  })
+}
 */
-      for (var i = 0; i < obj.data; i++) {
-        let component = obj.data[i];
-        let id = obj.data[i];
-        let name = obj.data[i].name;
-        let stat_name = obj.data[i].status_name;
-
-        
+for (var i = 0; i < obj.data; i++) {
+  let component = obj.data[i];
+  let id = obj.data[i];
+  let name = obj.data[i].name;
+  let stat_name = obj.data[i].status_name;
 
 
+    jQuery('#myTable').append('<thead id="hid_'+ i +'" class="status_head">'+ name +'</thead>' + '<tbody id="id_'+ i +'" class="status_body">'+ stat_name +'</tbody>');
 
-        globalos(id, i);
-      }
 
-  }
+
+
+
+  globalos(id, i);
+}
+
+}
 });
 
 
