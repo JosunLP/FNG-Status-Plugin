@@ -15,4 +15,3 @@ App supported by a temporary alert feature, which lists all
 Servers that are offline.
 
 --------------------------------------------------------------------------------
-

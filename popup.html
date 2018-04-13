@@ -1,73 +1,49 @@
 <!doctype html>
-<!--
-This page is shown when the extension button is clicked, because the
-"browser_action" field in manifest.json contains the "default_popup" key with
-value "popup.html".
--->
+
 <html>
 <head>
   <title>FearNixx Server Status</title>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
   <meta name="charset" charset="utf-8">
+  <script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css" >
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.dynatable.js"></script>
+  <link rel="stylesheet" href="css/jquery.dynatable.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <!--
-  - JavaScript and HTML must be in separate files: see our Content Security
-  - Policy documentation[1] for details and explanation.
-  -
-  - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
--->
-
-<script type="text/javascript" src="scripts/popup.js"></script>
+  <script type="text/javascript" onload="goodMorningV()"></script>
 </head>
 
 <body>
-  <img src="icon128.png" alt="logo" class="logo">
-  <h1>FNG Server Status</h1>
-  <strong style="color:white;visibility: visibil;">THIS APP IS IN MAINTANCE MODE AND NOT FINISHED</strong>
-  <div class="container">
+  <section class="header">
+    <img src="icon128.png" alt="logo" class="logo">
+    <h1>FNG Server Status</h1>
+    <strong style="color:white;visibility: visibil;">THIS APP IS IN BETA AND NOT FINISHED</strong>
+  </section>
+  <div class="container-fluid">
 
     <!--<iframe src="https://fearnixx.de/status/public/" width="400px" height="800px"></iframe>-->
     <section class="headlines">
 
-      <table>
-        <thead>
-          <th>Root Server</th>
-          <th>Teamspeak Server</th>
-          <th>Webside</th>
+      <table class="table" id="myTable">
+        <!-- each head three headlines and each body three answers!!-->
+        <thead id="myHead">
+
         </thead>
-        <tbody>
-          <td id="root">#ERROR</td>
-          <td id="ts">#ERROR</td>
-          <td id="website">#ERROR</td>
+        <tbody id="myBody">
+
         </tbody>
-        <thead>
-          <th>Minecraft Vanilla</th>
-          <th>Minecraft Technik</th>
-          <th>Minecraft Minnigames</th>
-        </thead>
-        <tbody>
-          <td id="mcv">#ERROR</td>
-          <td id="mct">#ERROR</td>
-          <td id="mcm">#ERROR</td>
-        </tbody>
-        <thead>
-          <th>TTT 01</th>
-          <th>TTT 02</th>
-          <th>TTT 03</th>
-        </thead>
-        <tbody>
-          <td id="ttt1">#ERROR</td>
-          <td id="ttt2">#ERROR</td>
-          <td id="ttt3">#ERROR</td>
-        </tbody>
+
+
+
       </table>
 
     </section>
 
     <section class="content">
-      <div id="item">
-
-      </div>
 
     </section>
 
@@ -76,19 +52,36 @@ value "popup.html".
   </div>
   <footer>
 
-      <script type="text/javascript" src="scripts/bg.js"></script>
+    <script type="text/javascript" src="js/bg.js"></script>
     <a href="background.html"> <button type="button" name="button">Kontakt Formular</button> </a>
-    <p class="bottom">Klicke <a href="https://fearnixx.de/status/public/subscribe" target="_blank">hier</a>, um E-Mails zu erhalten, wenn sich ein Dienst-Status ändert.</p>
+    <div class="icons">
+      <!--brand icon-->
+      <a href="https://gitlab.com/fearnixxgaming" target="_blank"><i class="fab fa-gitlab"></i></a>
+      <a href="https://www.youtube.com/channel/UCJz6mH7GCLM9lB7tVdeGdmQ" target="_blank"><i class="fab fa-youtube"></i></i></a>
+      <a href="https://www.facebook.com/FearNixx-Gaming-129194737555494/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/FearNixxGaming" target="_blank"><i class="fab fa-twitter"></i></i></a>
+      <a href="https://fearnixx.de" target="_blank"><i class="fas fa-building"></i></a>
+
+
+
+
+
+    </div>
+
+    <p class="bottom">Klicke <a href="https://status.fearnixx.de/subscribe" target="_blank">hier</a>, um E-Mails zu erhalten, wenn sich ein Dienst-Status ändert.</p>
+
+
+
   </footer>
 </body>
 <signature>
   <!--
-          ____.               __   _________ __                _______                              .__
-         |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
-         |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
-     /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
-     \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
-                         \/              \/           \/\/            \/                   \/     \/
+  ____.               __   _________ __                _______                              .__
+  |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+  |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
+  /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
+  \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
+  \/              \/           \/\/            \/                   \/     \/
 -->
 </signature>
 </html>
