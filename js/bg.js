@@ -14,11 +14,11 @@ xhr.addEventListener("readystatechange", function () {
 
     function globalos(id, nr) {
       var temp = obj.data[nr].status_name;
-      if (temp !== "Online") {
-        $("td:first").addClass("redRocket");
+      if (temp === "Offline") {
+        $("td").addClass("redRocket");
       }
-      if (temp === "Online") {
-        $("td:first").addClass("greenThumb");
+      else if (temp === "Online") {
+        $("td").addClass("greenThumb");
       }
     }
 
@@ -41,17 +41,59 @@ for (var i = 0; i < obj.data.length; i++) {
   let id = obj.data[i];
   let name = obj.data[i].name;
   let stat_name = obj.data[i].status_name;
-  let idTable = document.getElementById('myTable');
+  //let idTable = document.getElementById('myTable');
+
+    let thead = $('<th/>', {
+      id: "hid_" + i,
+      class: "status_head"
+    })
+
+    let tbody = $('<td/>', {
+      id: "id_" + i,
+      class: "status_body"
+    })
+
+    let trow = $('<tr>', {
+      id: "root_" + i
+    })
+
+    $('#myHead').append($(trow));
+
+    $('#myBody').append($(trow));
+
+    $('#root_' + i).append($(thead));
+
+    $('#root_' + i).append($(tbody));
+
+    $('#hid_' + i).append(name);
+
+    $('#id_' + i).append(stat_name);
 
 
 
 
-  idTable.append("<thead id='hid_"+ i +"' class='status_head'>"+ name +"</thead>" + "<tbody id='id_"+ i +"' class='status_body'>"+ stat_name +"</tbody>");
 
-  //jQuery('#myTable').append('<thead id="hid_'+ i +'" class="status_head">'+ name +'</thead>' + '<tbody id="id_'+ i +'" class="status_body">'+ stat_name +'</tbody>');
+//name stat_name
+/*
+
+  $('#myTable').append($(thead), $(tbody));
+
+  $('#hid_' + i).append(name);
+
+  $('#id_' + i).append(stat_name);*/
+
+
+
+
+
+
+
+  //idTable.append("<thead id='hid_"+ i +"' class='status_head'>"+ name +"</thead>" + "<tbody id='id_"+ i +"' class='status_body'>"+ stat_name +"</tbody>");
+
+  //$('#myTable').append('<thead id="hid_'+ i +'" class="status_head">'+ name +'</thead>' + '<tbody id="id_'+ i +'" class="status_body">'+ stat_name +'</tbody>');
   //$("<thead id='hid_"+ i +"' class='status_head'>"+ name +"</thead>" + "<tbody id='id_"+ i +"' class='status_body'>"+ stat_name +"</tbody>").after(".table");
 
-  //console.log('TEST');
+  //console.log();
   globalos(id, i);
 }
 
