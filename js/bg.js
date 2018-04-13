@@ -43,6 +43,12 @@ for (var i = 0; i < obj.data.length; i++) {
   let stat_name = obj.data[i].status_name;
   //let idTable = document.getElementById('myTable');
 
+  function goodMorningV(stat_name) {
+    if (stat_name === "Offline") {
+      alert("The Server " + name + " is Offline");
+    }
+  }
+
     let thead = $('<th/>', {
       id: "hid_" + i,
       class: "status_head"
@@ -95,6 +101,7 @@ for (var i = 0; i < obj.data.length; i++) {
 
   //console.log();
   globalos(id, i);
+  goodMorningV(stat_name);
 }
 
 }

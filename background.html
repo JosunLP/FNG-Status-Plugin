@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>background page</title>
+  <title>FearNixx Server Status</title>
+  <script type="text/javascript" src="js/functions.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
+  <meta name="charset" charset="utf-8">
+  <script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css" >
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/bg.js"></script>
-  <script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+  <script src="js/jquery.dynatable.js"></script>
+  <link rel="stylesheet" href="css/jquery.dynatable.css">
   <link rel="stylesheet" href="css/background.css">
 </head>
 <body>
@@ -19,15 +22,15 @@
       <table border="0" summary="">
         <tr>
           <td>Email:</td>
-          <td><input type="email" name="from"/></td>
+          <td><input type="email" name="from" required autofocus/></td>
         </tr>
         <tr>
           <td>Betreff:</td>
-          <td><input type="text" name="betreff"/></td>
+          <td><input type="text" name="betreff" required/></td>
         </tr>
         <tr>
           <td>Text:</td>
-          <td><textarea name="inhalt"></textarea></td>
+          <td><textarea name="inhalt" required></textarea></td>
         </tr>
 
         <tr>
