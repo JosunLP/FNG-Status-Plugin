@@ -34,19 +34,24 @@ xhr.addEventListener("readystatechange", function () {
   })
 }
 */
-for (var i = 0; i < obj.data; i++) {
+
+
+for (var i = 0; i < obj.data.length; i++) {
   let component = obj.data[i];
   let id = obj.data[i];
   let name = obj.data[i].name;
   let stat_name = obj.data[i].status_name;
-
-
-    jQuery('#myTable').append('<thead id="hid_'+ i +'" class="status_head">'+ name +'</thead>' + '<tbody id="id_'+ i +'" class="status_body">'+ stat_name +'</tbody>');
-
+  let idTable = document.getElementById('myTable');
 
 
 
 
+  idTable.append("<thead id='hid_"+ i +"' class='status_head'>"+ name +"</thead>" + "<tbody id='id_"+ i +"' class='status_body'>"+ stat_name +"</tbody>");
+
+  //jQuery('#myTable').append('<thead id="hid_'+ i +'" class="status_head">'+ name +'</thead>' + '<tbody id="id_'+ i +'" class="status_body">'+ stat_name +'</tbody>');
+  //$("<thead id='hid_"+ i +"' class='status_head'>"+ name +"</thead>" + "<tbody id='id_"+ i +"' class='status_body'>"+ stat_name +"</tbody>").after(".table");
+
+  //console.log('TEST');
   globalos(id, i);
 }
 
