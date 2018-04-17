@@ -44,9 +44,13 @@ for (var i = 0; i < obj.data.length; i++) {
   //let idTable = document.getElementById('myTable');
 
   function goodMorningV(stat_name) {
-    if (stat_name === "Offline") {
-      alert("The Server " + name + " is Offline");
-    }
+
+    $( document ).ready(function() {
+      if (stat_name === "Offline") {
+        alert("The Server " + name + " is Offline");
+      }
+    });
+
   }
 
     let thead = $('<th/>', {
