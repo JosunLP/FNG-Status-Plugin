@@ -44,43 +44,48 @@ for (var i = 0; i < obj.data.length; i++) {
   //let idTable = document.getElementById('myTable');
 
   function goodMorningV(stat_name) {
-    if (stat_name === "Offline") {
-      alert("The Server " + name + " is Offline");
-    }
+
+    $( document ).ready(function() {
+      if (stat_name === "Offline") {
+        alert("The Server " + name + " is Offline");
+      }
+    });
+    
   }
 
-    let thead = $('<th/>', {
-      id: "hid_" + i,
-      class: "status_head"
-    })
 
-    let tbody = $('<td/>', {
-      id: "id_" + i,
-      class: "status_body"
-    })
+  let thead = $('<th/>', {
+    id: "hid_" + i,
+    class: "status_head"
+  })
 
-    let trow = $('<tr>', {
-      id: "root_" + i
-    })
+  let tbody = $('<td/>', {
+    id: "id_" + i,
+    class: "status_body"
+  })
 
-    $('#myHead').append($(trow));
+  let trow = $('<tr>', {
+    id: "root_" + i
+  })
 
-    $('#myBody').append($(trow));
+  $('#myHead').append($(trow));
 
-    $('#root_' + i).append($(thead));
+  $('#myBody').append($(trow));
 
-    $('#root_' + i).append($(tbody));
+  $('#root_' + i).append($(thead));
 
-    $('#hid_' + i).append(name);
+  $('#root_' + i).append($(tbody));
 
-    $('#id_' + i).append(stat_name);
+  $('#hid_' + i).append(name);
 
-
-
+  $('#id_' + i).append(stat_name);
 
 
-//name stat_name
-/*
+
+
+
+  //name stat_name
+  /*
 
   $('#myTable').append($(thead), $(tbody));
 
