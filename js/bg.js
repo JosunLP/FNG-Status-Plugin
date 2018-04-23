@@ -85,10 +85,11 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 
-
-
-xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc+");
-
+function getIt() {
+  xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
+}
+getIt();
+setInterval(getIt(),1000);
 xhr.send(data);
 
 
