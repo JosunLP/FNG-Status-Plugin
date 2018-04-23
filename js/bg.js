@@ -79,14 +79,19 @@ function CreateTable(){
   }
 }
 
+
+setInterval(CreateTable(),3000);
 }
 });
 
 
 
-xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
+
+xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc+");
 
 xhr.send(data);
+
+
 
 
 //https://status.fearnixx.de/api/v1/components?sort=status=desc
