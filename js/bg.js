@@ -1,33 +1,33 @@
 
-var data = JSON.parse(true);
-//$("#laender").dynatable();
+function TableCreator() {
+  var data = JSON.parse(true);
+  //$("#laender").dynatable();
 
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
 
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
-    var json = this.responseText;
-    var obj = JSON.parse(json);
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      console.log(this.responseText);
+      var json = this.responseText;
+      var obj = JSON.parse(json);
 
-    function globalos(id, nr) {
-      var temp = obj.data[nr].status_name;
-      if (temp === "Offline") {
-        $("td").addClass("redRocket");
+      function globalos(id, nr) {
+        var temp = obj.data[nr].status_name;
+        if (temp === "Offline") {
+          $("td").addClass("redRocket");
+        }
+        else if (temp === "Online") {
+          $("td").addClass("greenThumb");
+        }
       }
-      else if (temp === "Online") {
-        $("td").addClass("greenThumb");
-      }
-    }
 
 
 
 
 
 
-    function CreateTable(){
       for (var i = 0; i < obj.data.length; i++) {
         let component = obj.data[i];
         let id = obj.data[i];
@@ -76,23 +76,32 @@ xhr.addEventListener("readystatechange", function () {
 
         //console.log();
         globalos(id, i);
+        goodMorningV(stat_name);
       }
     }
+  });
 
 
-    setInterval(CreateTable(),3000);
-  }
-});
-
-
-function getIt() {
   xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
+
+  xhr.send(data);
 }
-getIt();
-setInterval(getIt(),1000);
-xhr.send(data);
+
+TableCreator();
+
+function ClearTable() {
+  document.getElementById('myBody').innerHTML = "";
+}
 
 
+function Counter() {
+  setInterval(function () {
+    ClearTable();
+    TableCreator();
+  }, 30000);
+}
+
+Counter();
 
 
 //https://status.fearnixx.de/api/v1/components?sort=status=desc
