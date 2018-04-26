@@ -12,17 +12,19 @@ function TableCreator() {
       console.log(this.responseText);
       var json = this.responseText;
       var obj = JSON.parse(json);
-
+/*
       function globalos(id, nr) {
-        var temp = obj.data[nr].status_name;
-        if (temp === "Offline") {
-          $("td").addClass("redRocket");
-        }
-        else if (temp === "Online") {
+        var temp = obj.data[nr].status;
+        if (temp == 1) {
           $("td").addClass("greenThumb");
+          $("td").removeClass("redRocket");
+        }
+        if (temp == 4){
+          $("td").addClass("redRocket");
+          $("td").removeClass("greenThumb");
         }
       }
-
+*/
 
 
 
@@ -34,6 +36,19 @@ function TableCreator() {
         let name = obj.data[i].name;
         let stat_name = obj.data[i].status_name;
         //let idTable = document.getElementById('myTable');
+        //ERROR muss ich noch fixxen bei gelegenheit ;) verstest??
+        function globalos(id, nr) {
+          var temp = obj.data[nr].status;
+
+          if (temp == 1 ) {
+            $("td").addClass("greenThumb");
+            $("td").removeClass("redRocket");
+          }
+          if (temp == 4){
+            $("td").addClass("redRocket");
+            $("td").removeClass("greenThumb");
+          }
+        }
 
         function goodMorningV(stat_name) {
 
@@ -75,7 +90,7 @@ function TableCreator() {
 
 
         //console.log();
-        globalos(id, i);
+        // temp suspendid globalos(id, i);
         goodMorningV(stat_name);
       }
     }
