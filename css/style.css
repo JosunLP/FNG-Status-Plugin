@@ -121,6 +121,11 @@ article {
   font-weight: bolder;
 }
 
+.yellowBall {
+  color: yellow;
+  font-weight: bolder;
+  text-decoration: underline;
+}
 
 /*
     ____.               __   _________ __                _______                              .__

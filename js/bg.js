@@ -39,14 +39,22 @@ function TableCreator() {
         //ERROR muss ich noch fixxen bei gelegenheit ;) verstest??
         function globalos(id, nr) {
           var temp = obj.data[nr].status;
+          let get_it = document.getElementById('id_' + i);
 
           if (temp == 1 ) {
-            $("td").addClass("greenThumb");
-            $("td").removeClass("redRocket");
+            get_it.classList.add("greenThumb");
+            get_it.classList.remove("redRocket");
+            get_it.classList.remove("yellowBall");
+          }
+          if (temp == 3){
+            get_it.classList.remove("greenThumb");
+            get_it.classList.remove("redRocket");
+            get_it.classList.add("yellowBall");
           }
           if (temp == 4){
-            $("td").addClass("redRocket");
-            $("td").removeClass("greenThumb");
+            get_it.classList.remove("greenThumb");
+            get_it.classList.remove("yellowBall");
+            get_it.classList.add("redRocket");
           }
         }
 
@@ -55,6 +63,9 @@ function TableCreator() {
           $( document ).ready(function() {
             if (stat_name === "Offline") {
               alert("The Server " + name + " is Offline");
+            }
+            if (stat_name === "Wartung") {
+              alert("The Server " + name + " is under Maintance");
             }
           });
 
@@ -90,7 +101,7 @@ function TableCreator() {
 
 
         //console.log();
-        // temp suspendid globalos(id, i);
+        globalos(id, i);
         goodMorningV(stat_name);
       }
     }
