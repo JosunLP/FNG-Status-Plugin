@@ -1,8 +1,8 @@
 {
 	"meta": {
 		"pagination": {
-			"total": 16,
-			"count": 16,
+			"total": 15,
+			"count": 15,
 			"per_page": 20,
 			"current_page": 1,
 			"total_pages": 1,
@@ -79,7 +79,7 @@
 			"group_id": 2,
 			"enabled": true,
 			"created_at": "2018-01-25 12:38:07",
-			"updated_at": "2018-03-14 16:45:03",
+			"updated_at": "2018-04-02 19:50:01",
 			"deleted_at": null,
 			"status_name": "Online",
 			"tags": {
@@ -99,7 +99,7 @@
 			"group_id": 2,
 			"enabled": true,
 			"created_at": "2018-01-25 18:34:31",
-			"updated_at": "2018-03-14 16:45:04",
+			"updated_at": "2018-04-02 19:45:02",
 			"deleted_at": null,
 			"status_name": "Online",
 			"tags": {
@@ -127,27 +127,6 @@
 				"server": "server",
 				"gmod": "gmod",
 				"ttt": "ttt"
-			}
-		},
-		{
-			"id": 9,
-			"name": "StarWars RP",
-			"description": "StarWars RP mod for GMod",
-			"link": "https://gmod.fearnixx.de/gextension/",
-			"status": 1,
-			"order": 0,
-			"group_id": 2,
-			"enabled": true,
-			"created_at": "2018-01-25 18:37:38",
-			"updated_at": "2018-03-14 16:45:05",
-			"deleted_at": null,
-			"status_name": "Online",
-			"tags": {
-				"game": "game",
-				"server": "server",
-				"gmod": "gmod",
-				"star-wars": "star wars",
-				"roleplay": "roleplay"
 			}
 		},
 		{
@@ -198,7 +177,7 @@
 			"group_id": 3,
 			"enabled": true,
 			"created_at": "2018-01-25 18:50:38",
-			"updated_at": "2018-03-01 20:20:02",
+			"updated_at": "2018-04-26 21:10:01",
 			"deleted_at": null,
 			"status_name": "Online",
 			"tags": {
@@ -216,7 +195,7 @@
 			"group_id": 3,
 			"enabled": true,
 			"created_at": "2018-01-25 18:56:10",
-			"updated_at": "2018-03-14 16:45:05",
+			"updated_at": "2018-03-22 19:20:02",
 			"deleted_at": null,
 			"status_name": "Online",
 			"tags": {
@@ -254,7 +233,7 @@
 			"group_id": 2,
 			"enabled": true,
 			"created_at": "2018-01-25 21:30:27",
-			"updated_at": "2018-03-14 16:45:06",
+			"updated_at": "2018-04-02 19:40:02",
 			"deleted_at": null,
 			"status_name": "Online",
 			"tags": {
@@ -269,14 +248,14 @@
 			"name": "Minecraft-Proxy",
 			"description": "",
 			"link": "",
-			"status": 1,
+			"status": 3,
 			"order": 0,
 			"group_id": 2,
 			"enabled": true,
 			"created_at": "2018-02-27 18:01:09",
-			"updated_at": "2018-02-27 18:01:09",
+			"updated_at": "2018-05-09 23:14:30",
 			"deleted_at": null,
-			"status_name": "Online",
+			"status_name": "Wartung",
 			"tags": {
 				"game": "game",
 				"server": "server",
@@ -289,14 +268,14 @@
 			"name": "Minecraft-Hub",
 			"description": "",
 			"link": "",
-			"status": 1,
+			"status": 3,
 			"order": 0,
 			"group_id": 2,
 			"enabled": true,
 			"created_at": "2018-02-27 18:01:41",
-			"updated_at": "2018-02-27 18:01:41",
+			"updated_at": "2018-05-09 23:14:31",
 			"deleted_at": null,
-			"status_name": "Online",
+			"status_name": "Wartung",
 			"tags": {
 				"game": "game",
 				"server": "server",
@@ -309,14 +288,14 @@
 			"name": "Minecraft-Technik",
 			"description": "",
 			"link": "",
-			"status": 1,
+			"status": 3,
 			"order": 0,
 			"group_id": 2,
 			"enabled": true,
 			"created_at": "2018-02-27 18:02:15",
-			"updated_at": "2018-02-27 18:02:15",
+			"updated_at": "2018-04-29 23:27:57",
 			"deleted_at": null,
-			"status_name": "Online",
+			"status_name": "Wartung",
 			"tags": {
 				"game": "game",
 				"server": "server",

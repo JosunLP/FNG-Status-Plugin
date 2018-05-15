@@ -35,11 +35,20 @@ function TableCreator() {
         let id = obj.data[i];
         let name = obj.data[i].name;
         let stat_name = obj.data[i].status_name;
+        let linka = obj.data[i].link;
+        let linktarget;
+
+        if (obj.data[i].link.length >= 2) {
+          linktarget = "_blank";
+        }
+        else {
+          linktarget = "";
+        }
         //let idTable = document.getElementById('myTable');
         //ERROR muss ich noch fixxen bei gelegenheit ;) verstest??
         function globalos(id, nr) {
           var temp = obj.data[nr].status;
-          let get_it = document.getElementById('id_' + i);
+          let get_it = document.getElementById('ida_' + i);
 
           if (temp == 1 ) {
             get_it.classList.add("greenThumb");
@@ -81,6 +90,12 @@ function TableCreator() {
           class: "status_body"
         })
 
+        let tlink = $('<a/>', {
+          id: "ida_" + i,
+          href: linka,
+          target: linktarget
+        })
+
         let trow = $('<tr>', {
           id: "root_" + i
         })
@@ -95,7 +110,9 @@ function TableCreator() {
 
         $('#hid_' + i).append(name);
 
-        $('#id_' + i).append(stat_name);
+        $('#id_' + i).append(tlink);
+
+        $('#ida_' + i).append(stat_name);
 
 
 
