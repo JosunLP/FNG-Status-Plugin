@@ -82,27 +82,31 @@ for (var i = 0; i < obj.data.length; i++) {
 
 
   function goodMorningV(stat_name, name) {
+
+
     if (stat_name === "Offline") {
-      let notification = new Notification(
+      new Notification(
         'Warnung!', {
           icon: '../icon128.png',
           body: 'Der Server ' + name + ' ist Offline',
         });
       }
+
       if (stat_name === "Wartung") {
-        let notification = new Notification(
+        new Notification(
           'Wichtig!', {
             icon: '../icon128.png',
             body: 'Der Server ' + name + ' ist in Wartung',
           });
         }
-        else {
-          let notification = new Notification(
-            'Super', {
-              icon: '../icon128.png',
-              body: 'Alle Server in Ordnung',
-            });
-          }
+
+        //else {
+          //new Notification(
+            //'Super', {
+              //icon: '../icon128.png',
+              //body: 'Alle Server in Ordnung',
+            //});
+          //}
         }
 
         let thead = $('<th/>', {
