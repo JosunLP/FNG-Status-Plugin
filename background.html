@@ -18,15 +18,11 @@
   <main>
     <h1>Kontakt</h1>
     <!--You need to link the URL of your mail.php-->
-    <form method="post" action="http://yourdomain.test/mail.php" class="contact">
+    <form method="post" action="mailto:info@fearnixx.de" enctype="text/plain" class="contact">
       <table style=" border: 0;">
         <tr>
-          <td>Email:</td>
-          <td><input type="email" name="from" required autofocus/></td>
-        </tr>
-        <tr>
           <td>Betreff:</td>
-          <td><input type="text" name="betreff" required/></td>
+          <td><input type="text" name="betreff" required autofocus/></td>
         </tr>
         <tr>
           <td>Text:</td>
