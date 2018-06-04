@@ -21,7 +21,12 @@
   "permissions": [
     "activeTab",
     "storage",
+    "notifications",
     "http://*.fearnixx.de/", "https://*.fearnixx.de/"
+  ],
+  "web_accessible_resources": [
+    "icon128.png",
+    "js/bg.js"
   ],
   "commands": {
       "_execute_browser_action": {
