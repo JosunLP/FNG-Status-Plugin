@@ -1,39 +1,46 @@
 
-var data = JSON.parse(true);
-//$("#laender").dynatable();
+// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.');
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+  Notification.requestPermission();
+});
 
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
 
-xhr.addEventListener("readystatechange", function () {
-  if (this.readyState === this.DONE) {
-    console.log(this.responseText);
-    var json = this.responseText;
-    var obj = JSON.parse(json);
+function TableCreator() {
+  var data = JSON.parse(true);
+  //$("#laender").dynatable();
 
-    function globalos(id, nr) {
-      var temp = obj.data[nr].status_name;
-      if (temp === "Offline") {
-        $("td").addClass("redRocket");
-      }
-      else if (temp === "Online") {
-        $("td").addClass("greenThumb");
-      }
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      //console.log(this.responseText);
+      var json = this.responseText;
+      var obj = JSON.parse(json);
+      /*
+      function globalos(id, nr) {
+      var temp = obj.data[nr].status;
+      if (temp == 1) {
+      $("td").addClass("greenThumb");
+      $("td").removeClass("redRocket");
     }
-
-
-
-    /*  for (var i = 0; i < 15; i++) {
-    var idones = ["tsbot", "ts", "tsmusi", "ttt1", "ttt2", "ttt3", "swrp", "tecsold", "ptp", "ptd", "gmodweb", "tsdns", "darkrp", "mcprox", "mchub", "mctec"];
-    idones.forEach(function idnonsense(idone) {
-    var ido = "#" + idone;
-    document.querySelector(ido).innerHTML =
-    obj.data[i].status_name;
-    globalos(ido, i);
-  })
+    if (temp == 4){
+    $("td").addClass("redRocket");
+    $("td").removeClass("greenThumb");
+  }
 }
 */
+
+
+
 
 
 for (var i = 0; i < obj.data.length; i++) {
@@ -41,85 +48,135 @@ for (var i = 0; i < obj.data.length; i++) {
   let id = obj.data[i];
   let name = obj.data[i].name;
   let stat_name = obj.data[i].status_name;
+  let linka = obj.data[i].link;
+  let linktarget;
+
+  if (obj.data[i].link.length >= 2) {
+    linktarget = "_blank";
+  }
+  else {
+    linktarget = "";
+  }
   //let idTable = document.getElementById('myTable');
+  //ERROR muss ich noch fixxen bei gelegenheit ;) verstest??
+  function globalos(id, nr) {
+    var temp = obj.data[nr].status;
+    let get_it = document.getElementById('ida_' + i);
 
-  function goodMorningV(stat_name) {
-
-    $( document ).ready(function() {
-      if (stat_name === "Offline") {
-        alert("The Server " + name + " is Offline");
-      }
-    });
-    
+    if (temp == 1 ) {
+      get_it.classList.add("greenThumb");
+      get_it.classList.remove("redRocket");
+      get_it.classList.remove("yellowBall");
+    }
+    if (temp == 3){
+      get_it.classList.remove("greenThumb");
+      get_it.classList.remove("redRocket");
+      get_it.classList.add("yellowBall");
+    }
+    if (temp == 4){
+      get_it.classList.remove("greenThumb");
+      get_it.classList.remove("yellowBall");
+      get_it.classList.add("redRocket");
+    }
   }
 
 
-  let thead = $('<th/>', {
-    id: "hid_" + i,
-    class: "status_head"
-  })
-
-  let tbody = $('<td/>', {
-    id: "id_" + i,
-    class: "status_body"
-  })
-
-  let trow = $('<tr>', {
-    id: "root_" + i
-  })
-
-  $('#myHead').append($(trow));
-
-  $('#myBody').append($(trow));
-
-  $('#root_' + i).append($(thead));
-
-  $('#root_' + i).append($(tbody));
-
-  $('#hid_' + i).append(name);
-
-  $('#id_' + i).append(stat_name);
+  function goodMorningV(stat_name, name) {
 
 
+    if (stat_name === "Offline") {
+      new Notification(
+        'Warnung!', {
+          icon: '../icon128.png',
+          body: 'Der Server ' + name + ' ist Offline',
+        });
+      }
+
+      if (stat_name === "Wartung") {
+        new Notification(
+          'Wichtig!', {
+            icon: '../icon128.png',
+            body: 'Der Server ' + name + ' ist in Wartung',
+          });
+        }
+
+        //else {
+          //new Notification(
+            //'Super', {
+              //icon: '../icon128.png',
+              //body: 'Alle Server in Ordnung',
+            //});
+          //}
+        }
+
+        let thead = $('<th/>', {
+          id: "hid_" + i,
+          class: "status_head"
+        })
+
+        let tbody = $('<td/>', {
+          id: "id_" + i,
+          class: "status_body"
+        })
+
+        let tlink = $('<a/>', {
+          id: "ida_" + i,
+          href: linka,
+          target: linktarget
+        })
+
+        let trow = $('<tr>', {
+          id: "root_" + i
+        })
+
+        $('#myHead').append($(trow));
+
+        $('#myBody').append($(trow));
+
+        $('#root_' + i).append($(thead));
+
+        $('#root_' + i).append($(tbody));
+
+        $('#hid_' + i).append(name);
+
+        $('#id_' + i).append(tlink);
+
+        $('#ida_' + i).append(stat_name);
 
 
 
-  //name stat_name
-  /*
 
-  $('#myTable').append($(thead), $(tbody));
-
-  $('#hid_' + i).append(name);
-
-  $('#id_' + i).append(stat_name);*/
-
+        //console.log();
+        globalos(id, i);
+        goodMorningV(stat_name, name);
+      }
+    }
+  });
 
 
+  xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
 
-
-
-
-  //idTable.append("<thead id='hid_"+ i +"' class='status_head'>"+ name +"</thead>" + "<tbody id='id_"+ i +"' class='status_body'>"+ stat_name +"</tbody>");
-
-  //$('#myTable').append('<thead id="hid_'+ i +'" class="status_head">'+ name +'</thead>' + '<tbody id="id_'+ i +'" class="status_body">'+ stat_name +'</tbody>');
-  //$("<thead id='hid_"+ i +"' class='status_head'>"+ name +"</thead>" + "<tbody id='id_"+ i +"' class='status_body'>"+ stat_name +"</tbody>").after(".table");
-
-  //console.log();
-  globalos(id, i);
-  goodMorningV(stat_name);
+  xhr.send(data);
 }
 
+TableCreator();
+
+function ClearTable() {
+  document.getElementById('myBody').innerHTML = "";
 }
-});
 
 
+function Counter() {
+  setInterval(function () {
+    ClearTable();
+    TableCreator();
+  }, 30000);
+}
 
-xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
-
-xhr.send(data);
+Counter();
 
 
-
+//https://status.fearnixx.de/api/v1/components?sort=status=desc
 
 
 

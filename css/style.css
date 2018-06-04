@@ -1,5 +1,6 @@
 html {
   background-color: #5363FF;
+  color: white;
   margin-left: 0;
   padding: 0;
 }
@@ -13,8 +14,9 @@ body {
   border-left-style: none;
   border-width: 7px;
   border-color: #3541b2;
-  margin: 1;
+  margin: 1px;
   background-color: #539CFF;
+  color:white;
 }
 
 .logo {
@@ -119,11 +121,17 @@ article {
   font-weight: bolder;
 }
 
+.yellowBall {
+  color: yellow;
+  font-weight: bolder;
+  text-decoration: underline;
+}
 
-
+/*
     ____.               __   _________ __                _______                              .__
     |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
     |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
 /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
 \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
   \/              \/           \/\/            \/                   \/     \/
+*/
