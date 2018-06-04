@@ -1,4 +1,17 @@
 
+// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.');
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+  Notification.requestPermission();
+});
+
+
+
 function TableCreator() {
   var data = JSON.parse(true);
   //$("#laender").dynatable();
@@ -9,75 +22,91 @@ function TableCreator() {
 
   xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
-      console.log(this.responseText);
+      //console.log(this.responseText);
       var json = this.responseText;
       var obj = JSON.parse(json);
-/*
+      /*
       function globalos(id, nr) {
-        var temp = obj.data[nr].status;
-        if (temp == 1) {
-          $("td").addClass("greenThumb");
-          $("td").removeClass("redRocket");
-        }
-        if (temp == 4){
-          $("td").addClass("redRocket");
-          $("td").removeClass("greenThumb");
-        }
-      }
+      var temp = obj.data[nr].status;
+      if (temp == 1) {
+      $("td").addClass("greenThumb");
+      $("td").removeClass("redRocket");
+    }
+    if (temp == 4){
+    $("td").addClass("redRocket");
+    $("td").removeClass("greenThumb");
+  }
+}
 */
 
 
 
 
 
-      for (var i = 0; i < obj.data.length; i++) {
-        let component = obj.data[i];
-        let id = obj.data[i];
-        let name = obj.data[i].name;
-        let stat_name = obj.data[i].status_name;
-        let linka = obj.data[i].link;
-        let linktarget;
+for (var i = 0; i < obj.data.length; i++) {
+  let component = obj.data[i];
+  let id = obj.data[i];
+  let name = obj.data[i].name;
+  let stat_name = obj.data[i].status_name;
+  let linka = obj.data[i].link;
+  let linktarget;
 
-        if (obj.data[i].link.length >= 2) {
-          linktarget = "_blank";
-        }
-        else {
-          linktarget = "";
-        }
-        //let idTable = document.getElementById('myTable');
-        //ERROR muss ich noch fixxen bei gelegenheit ;) verstest??
-        function globalos(id, nr) {
-          var temp = obj.data[nr].status;
-          let get_it = document.getElementById('ida_' + i);
+  if (obj.data[i].link.length >= 2) {
+    linktarget = "_blank";
+  }
+  else {
+    linktarget = "";
+  }
+  //let idTable = document.getElementById('myTable');
+  //ERROR muss ich noch fixxen bei gelegenheit ;) verstest??
+  function globalos(id, nr) {
+    var temp = obj.data[nr].status;
+    let get_it = document.getElementById('ida_' + i);
 
-          if (temp == 1 ) {
-            get_it.classList.add("greenThumb");
-            get_it.classList.remove("redRocket");
-            get_it.classList.remove("yellowBall");
-          }
-          if (temp == 3){
-            get_it.classList.remove("greenThumb");
-            get_it.classList.remove("redRocket");
-            get_it.classList.add("yellowBall");
-          }
-          if (temp == 4){
-            get_it.classList.remove("greenThumb");
-            get_it.classList.remove("yellowBall");
-            get_it.classList.add("redRocket");
-          }
-        }
+    if (temp == 1 ) {
+      get_it.classList.add("greenThumb");
+      get_it.classList.remove("redRocket");
+      get_it.classList.remove("yellowBall");
+    }
+    if (temp == 3){
+      get_it.classList.remove("greenThumb");
+      get_it.classList.remove("redRocket");
+      get_it.classList.add("yellowBall");
+    }
+    if (temp == 4){
+      get_it.classList.remove("greenThumb");
+      get_it.classList.remove("yellowBall");
+      get_it.classList.add("redRocket");
+    }
+  }
 
-        function goodMorningV(stat_name) {
 
-          $( document ).ready(function() {
-            if (stat_name === "Offline") {
-              alert("The Server " + name + " is Offline");
-            }
-            if (stat_name === "Wartung") {
-              alert("The Server " + name + " is under Maintance");
-            }
+  function goodMorningV(stat_name, name) {
+
+
+    if (stat_name === "Offline") {
+      new Notification(
+        'Warnung!', {
+          icon: '../icon128.png',
+          body: 'Der Server ' + name + ' ist Offline',
+        });
+      }
+
+      if (stat_name === "Wartung") {
+        new Notification(
+          'Wichtig!', {
+            icon: '../icon128.png',
+            body: 'Der Server ' + name + ' ist in Wartung',
           });
+        }
 
+        //else {
+          //new Notification(
+            //'Super', {
+              //icon: '../icon128.png',
+              //body: 'Alle Server in Ordnung',
+            //});
+          //}
         }
 
         let thead = $('<th/>', {
@@ -119,7 +148,7 @@ function TableCreator() {
 
         //console.log();
         globalos(id, i);
-        goodMorningV(stat_name);
+        goodMorningV(stat_name, name);
       }
     }
   });
