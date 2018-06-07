@@ -92,7 +92,7 @@ for (var i = 0; i < obj.data.length; i++) {
         });
       }
 
-      if (stat_name === "Wartung") {
+      else if (stat_name === "Wartung") {
         new Notification(
           'Wichtig!', {
             icon: '../icon128.png',
@@ -100,63 +100,56 @@ for (var i = 0; i < obj.data.length; i++) {
           });
         }
 
-        //else {
-          //new Notification(
-            //'Super', {
-              //icon: '../icon128.png',
-              //body: 'Alle Server in Ordnung',
-            //});
-          //}
-        }
-
-        let thead = $('<th/>', {
-          id: "hid_" + i,
-          class: "status_head"
-        })
-
-        let tbody = $('<td/>', {
-          id: "id_" + i,
-          class: "status_body"
-        })
-
-        let tlink = $('<a/>', {
-          id: "ida_" + i,
-          href: linka,
-          target: linktarget
-        })
-
-        let trow = $('<tr>', {
-          id: "root_" + i
-        })
-
-        $('#myHead').append($(trow));
-
-        $('#myBody').append($(trow));
-
-        $('#root_' + i).append($(thead));
-
-        $('#root_' + i).append($(tbody));
-
-        $('#hid_' + i).append(name);
-
-        $('#id_' + i).append(tlink);
-
-        $('#ida_' + i).append(stat_name);
-
-
-
-
-        //console.log();
-        globalos(id, i);
-        goodMorningV(stat_name, name);
       }
+
+      let thead = $('<th/>', {
+        id: "hid_" + i,
+        class: "status_head"
+      })
+
+      let tbody = $('<td/>', {
+        id: "id_" + i,
+        class: "status_body"
+      })
+
+      let tlink = $('<a/>', {
+        id: "ida_" + i,
+        href: linka,
+        target: linktarget
+      })
+
+      let trow = $('<tr>', {
+        id: "root_" + i
+      })
+
+      $('#myHead').append($(trow));
+
+      $('#myBody').append($(trow));
+
+      $('#root_' + i).append($(thead));
+
+      $('#root_' + i).append($(tbody));
+
+      $('#hid_' + i).append(name);
+
+      $('#id_' + i).append(tlink);
+
+      $('#ida_' + i).append(stat_name);
+
+
+
+
+      //console.log();
+      globalos(id, i);
+      goodMorningV(stat_name, name);
     }
-  });
+  }
+});
 
 
-  xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
+xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
 
-  xhr.send(data);
+xhr.send(data);
 }
 
 TableCreator();
