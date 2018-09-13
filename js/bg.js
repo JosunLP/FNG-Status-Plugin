@@ -168,6 +168,28 @@ function Counter() {
 
 Counter();
 
+chrome.tabs.query({
+            active: true,
+            lastFocusedWindow: true
+        }, function(tabs) {
+            // and use that tab to fill in out title and url
+            var tab = tabs[0];
+            console.log(tab.url);
+
+            document.getElementById('pageURL').innerHTML = tab.url;
+
+            var URLtype = document.getElementById('pageURL').innerHTML;
+
+            if (URLtype == "https://fearnixx.de/") {
+              document.getElementById('welcome').innerHTML = "Willkommen";
+            }
+            else {
+              document.getElementById('welcome').innerHTML = "Nope";
+            }
+
+
+        });
+
 
 //https://status.fearnixx.de/api/v1/components?sort=status=desc
 
