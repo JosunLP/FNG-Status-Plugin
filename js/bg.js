@@ -180,13 +180,15 @@ chrome.tabs.query({
 
             var URLtype = document.getElementById('pageURL').innerHTML;
 
-            if (URLtype == "https://fearnixx.de/") {
-              document.getElementById('welcome').innerHTML = "Willkommen";
+            if (tab.url == 'https://fearnixx.de/') {
+              var userTitleBadge = chrome.tabs.getElementsByClassName('userTitleBadge').innerHTML;
+              var menuOverlayItemTitle = chrome.tabs.getElementsByClassName('menuOverlayItemTitle').innerHTML;
+
+              document.getElementById('greet').innerHTML ="<b>Herzlich Willkommen: </b> " + userTitleBadge + " " + menuOverlayItemTitle;
             }
             else {
-              document.getElementById('welcome').innerHTML = "Nope";
+              return;
             }
-
 
         });
 
