@@ -176,23 +176,24 @@ chrome.tabs.query({
             lastFocusedWindow: true
         }, function(tabs) {
             // and use that tab to fill in out title and url
-            var tab = tabs[0];
+            let tab = tabs[0];
             //console.log(tab.url);
-            console.log(tab.index);
+            //console.log(tab.index);
 
-            document.getElementById('pageURL').innerHTML = tab.url;
 
-            var URLtype = document.getElementById('pageURL').innerHTML;
+
+            //var URLtype = tab.url; //document.getElementById('pageURL').innerHTML;
 
             if (tab.url == 'https://fearnixx.de/') {
-              var userTitleBadge = "Member";
-              var menuOverlayItemTitle = "Name";
+              let userTitleBadge = "Member";
+              let menuOverlayItemTitle = "Name";
 
+              document.getElementById('pageURL').innerHTML = "Du bist auf: " + tab.url;
               document.getElementById('greet').innerHTML ="<b>Herzlich Willkommen: </b> " + userTitleBadge + " " + menuOverlayItemTitle;
             }
             else {
-              var userTitleBadge = "Unknown";
-              var menuOverlayItemTitle = "Member";
+              let userTitleBadge = "Unknown";
+              let menuOverlayItemTitle = "Member";
 
               return;
             }
