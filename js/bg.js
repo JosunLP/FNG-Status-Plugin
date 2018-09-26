@@ -92,7 +92,7 @@ for (var i = 0; i < obj.data.length; i++) {
         });
       }
 
-      else if (stat_name === "Wartung") {
+      else if (stat_name === "Wartungsarbeiten") {
         new Notification(
           'Wichtig!', {
             icon: '../icon128.png',
