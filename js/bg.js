@@ -168,31 +168,43 @@ function Counter() {
 
 Counter();
 
+
+
+
 chrome.tabs.query({
             active: true,
             lastFocusedWindow: true
         }, function(tabs) {
             // and use that tab to fill in out title and url
             var tab = tabs[0];
-            console.log(tab.url);
+            //console.log(tab.url);
+            console.log(tab.index);
 
             document.getElementById('pageURL').innerHTML = tab.url;
 
             var URLtype = document.getElementById('pageURL').innerHTML;
 
             if (tab.url == 'https://fearnixx.de/') {
-              var userTitleBadge = chrome.tabs.getElementsByClassName('userTitleBadge').innerHTML;
-              var menuOverlayItemTitle = chrome.tabs.getElementsByClassName('menuOverlayItemTitle').innerHTML;
+              var userTitleBadge = "Member";
+              var menuOverlayItemTitle = "Name";
 
               document.getElementById('greet').innerHTML ="<b>Herzlich Willkommen: </b> " + userTitleBadge + " " + menuOverlayItemTitle;
             }
             else {
+              var userTitleBadge = "Unknown";
+              var menuOverlayItemTitle = "Member";
+
               return;
             }
 
         });
 
-
+//chrome.tabs.getCurrent(function(){
+  //document.getElementsByClassName('userTitleBadge').innerHTML;
+//};);
+//chrome.tabs.getCurrent(function(){
+  //document.getElementsByClassName('menuOverlayItemTitle').innerHTML;
+//};);
 //https://status.fearnixx.de/api/v1/components?sort=status=desc
 
 
