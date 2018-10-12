@@ -5,25 +5,35 @@
   "description": "This extension allows the user to show the status of the FearNixx Gaming services",
   "version": "0.1.5",
 
+  "content_scripts": [{
+    "css":["css/page.css"],
+    "js": ["js/page.js"],
+    "matches": ["https://fearnixx.de/"]
+  }],
+
   "icons": { "16": "icon16.png",
            "48": "icon48.png",
-          "128": "icon128.png" },
+          "128": "icon128.png"
+  },
 
   "browser_action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html",
     "default_title": "FNG Server Status"
   },
+
   "background": {
     "persistent": true,
     "scripts": ["js/bg.js","js/popup.js"]
   },
+  
   "permissions": [
     "activeTab",
     "storage",
     "notifications",
     "http://*.fearnixx.de/", "https://*.fearnixx.de/",
-    "tabs"
+    "tabs",
+    "geolocation"
   ],
   "web_accessible_resources": [
     "icon128.png",

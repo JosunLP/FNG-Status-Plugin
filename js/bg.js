@@ -84,11 +84,11 @@ for (var i = 0; i < obj.data.length; i++) {
   function goodMorningV(stat_name, name) {
 
 
-    if (stat_name === "Offline") {
+    if (stat_name === "Ausgefallen") {
       new Notification(
         'Warnung!', {
           icon: '../icon128.png',
-          body: 'Der Server ' + name + ' ist Offline',
+          body: 'Der Server ' + name + ' ist Ausgefallen',
         });
       }
 
@@ -167,7 +167,13 @@ function Counter() {
 }
 
 Counter();
-
+var listenClose = chrome.browserAction.onClicked.addListener(function(tab) {
+  // No tabs or host permissions needed!
+  console.log('Turning ' + tab.url + ' red!');
+  chrome.tabs.executeScript({
+    code: 'document.body.style.backgroundColor="red"'
+  });
+});
 
 
 
@@ -181,24 +187,27 @@ chrome.tabs.query({
             //console.log(tab.index);
 
 
-
             //var URLtype = tab.url; //document.getElementById('pageURL').innerHTML;
 
             if (tab.url == 'https://fearnixx.de/') {
-              let userTitleBadge = "Member";
-              let menuOverlayItemTitle = "Name";
+              var userTitleBadge = document.getElementsByClassName('userTitleBadge').innerHTML;
+              var menuOverlayItemTitle = document.getElementsByClassName('menuOverlayItemTitle').innerHTML;
 
-              document.getElementById('pageURL').innerHTML = "Du bist auf: " + tab.url;
+              //document.getElementById('pageURL').innerHTML = "Du bist auf: " + tab.url;
               document.getElementById('greet').innerHTML ="<b>Herzlich Willkommen: </b> " + userTitleBadge + " " + menuOverlayItemTitle;
             }
             else {
-              let userTitleBadge = "Unknown";
-              let menuOverlayItemTitle = "Member";
+              var userTitleBadge = "Unknown";
+              var menuOverlayItemTitle = "Member";
 
               return;
             }
 
+
         });
+
+
+
 
 //chrome.tabs.getCurrent(function(){
   //document.getElementsByClassName('userTitleBadge').innerHTML;
