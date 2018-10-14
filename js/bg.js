@@ -172,35 +172,35 @@ Counter();
 
 
 
-chrome.tabs.query({
-            active: true,
-            lastFocusedWindow: true
-        }, function(tabs) {
-            // and use that tab to fill in out title and url
-            let tab = tabs[0];
-
-            var userTitleBadge;
-            var menuOverlayItemTitle;
-
-
-            //var URLtype = tab.url; //document.getElementById('pageURL').innerHTML;
-
-            if (tab.url == 'https://fearnixx.de/') {
-              var userTitleBadge = document.getElementsByClassName('userTitleBadge').innerHTML;
-              var menuOverlayItemTitle = document.getElementsByClassName('menuOverlayItemTitle').innerHTML;
-
-              //document.getElementById('pageURL').innerHTML = "Du bist auf: " + tab.url;
-              document.getElementById('greet').innerHTML ="<b>Herzlich Willkommen: </b> " + userTitleBadge + " " + menuOverlayItemTitle;
-            }
-            else {
-              var userTitleBadge = "Unknown";
-              var menuOverlayItemTitle = "Member";
-
-              return;
-            }
-
-
-        });
+//chrome.tabs.query({
+  //          active: true,
+//            lastFocusedWindow: true
+//        }, function(tabs) {
+//            // and use that tab to fill in out title and url
+//            let tab = tabs[0];
+//
+//            var userTitleBadge;
+//            var menuOverlayItemTitle;
+//
+//
+//            //var URLtype = tab.url; //document.getElementById('pageURL').innerHTML;
+//
+//            if (tab.url == 'https://fearnixx.de/') {
+//              var userTitleBadge = document.getElementsByClassName('userTitleBadge').innerHTML;
+//              var menuOverlayItemTitle = document.getElementsByClassName('menuOverlayItemTitle').innerHTML;
+//
+//              //document.getElementById('pageURL').innerHTML = "Du bist auf: " + tab.url;
+//              document.getElementById('greet').innerHTML ="<b>Herzlich Willkommen: </b> " + userTitleBadge + " " + menuOverlayItemTitle;
+//            }
+//            else {
+//              var userTitleBadge = "Unknown";
+//              var menuOverlayItemTitle = "Member";
+//
+//              return;
+//            }
+//
+//
+//        });
 
 
 
