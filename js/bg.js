@@ -163,17 +163,12 @@ function Counter() {
   setInterval(function () {
     ClearTable();
     TableCreator();
-  }, 30000);
+  }, 60000);
 }
 
 Counter();
-var listenClose = chrome.browserAction.onClicked.addListener(function(tab) {
-  // No tabs or host permissions needed!
-  console.log('Turning ' + tab.url + ' red!');
-  chrome.tabs.executeScript({
-    code: 'document.body.style.backgroundColor="red"'
-  });
-});
+
+
 
 
 
@@ -183,8 +178,9 @@ chrome.tabs.query({
         }, function(tabs) {
             // and use that tab to fill in out title and url
             let tab = tabs[0];
-            //console.log(tab.url);
-            //console.log(tab.index);
+
+            var userTitleBadge;
+            var menuOverlayItemTitle;
 
 
             //var URLtype = tab.url; //document.getElementById('pageURL').innerHTML;
@@ -205,7 +201,6 @@ chrome.tabs.query({
 
 
         });
-
 
 
 
