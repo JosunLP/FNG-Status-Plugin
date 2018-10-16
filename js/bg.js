@@ -163,6 +163,7 @@ function Counter() {
   setInterval(function () {
     ClearTable();
     TableCreator();
+    console.log("Calling for Data");
   }, 60000);
 }
 
