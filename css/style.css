@@ -1,6 +1,6 @@
 html {
-  background-color: #00327b;
-  color: rgba(255, 144, 46, 1);
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
   margin-left: 0;
   padding: 0;
 }
@@ -14,10 +14,11 @@ body {
   border-style: solid;
   border-left-style: none;
   border-width: 7px;
-  border-color: #3541b2;
+  border-color: var(--main-border-color);
   margin: 1px;
-  background-color: #00327b;
-  color:rgba(255, 144, 46, 1);
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  font-family: var(--main-font-family);
 }
 
 .logo {
@@ -29,22 +30,23 @@ body {
 
 h1 {
   font-size: 32px;
-  color: rgba(255, 144, 46, 1);
+  color: var(--main-font-color);
+  font-family: var(--header-font-family);
 }
 
-p{
-  color:rgba(255, 144, 46, 1);
+p {
+  color: var(--main-font-color);
 }
 
 a {
-  color: white;
+ color: var(--main-link-color);
 }
 .svg-inline--fa {
-  color: rgba(255, 144, 46, 1);
+  color: var(--main-font-color);
 }
 
 .svg-inline--fa:hover {
-  color: white;
+ color: var(--main-link-color);
 }
 
 .headlines {
@@ -54,17 +56,29 @@ a {
   text-align: center;
 }
 
+.header {
+  background:var(--main-header-bg-color);
+  position: fixed;
+  width: 100%;
+  margin-top: -10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom-color:var(--main-border-color);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+}
+
 table {
   margin-top: 110px;
   font-size: 1rem;
-  color: rgba(255, 144, 46, 1);
+  color: var(--main-font-color);
 }
 
 
 
 button {
-  background-color: #010b44;
-  border-color: #5363FF;
+  background-color: var(--main-button-bg-color);
+  border-color: var(--main-border-color);
   height: 30px;
   width: 120px;
   border-radius: 2rem;
@@ -72,7 +86,7 @@ button {
   background-position: center;
   background-size: cover;
   cursor: pointer;
-  color: rgba(255, 144, 46, 1);
+  color: var(--main-font-color);
   font-size: 10px;
 }
 
@@ -104,6 +118,9 @@ table {
 }
 
 
+article {
+  display: inline-block;
+}
 
 footer {
   bottom: 0;
@@ -111,7 +128,7 @@ footer {
   right: 0;
   margin-bottom: 0;
   position: fixed;
-  background: linear-gradient(to top, rgba(2, 11, 69, 1) 55%, #003264 80%, #00327b);
+  background: var(--main-footer-bg-color);
   border-top-style: solid;
   border-top-width: 7px;
   border-top-color: #3541b2;
@@ -119,25 +136,6 @@ footer {
   padding-top: 1rem;
 }
 
-article {
-  display: inline-block;
-}
-
-.header {
-  background:linear-gradient(to bottom, rgba(2, 11, 69, 1) 40%, #003264 80%, #00327b);
-  border-bottom-style: solid;
-  border-bottom-width: 7px;
-  border-top-width: 7px;
-  border-bottom-color: #539CFF;
-  border-top-color: #5363FF;
-  border-left-width: 9px;
-  position: fixed;
-  width: 100%;
-  margin-top: -17px;
-  padding-bottom: 20px;
-  border-color: #3541b2;
-  border-style: solid;
-}
 
 .redRocket {
   color: red;

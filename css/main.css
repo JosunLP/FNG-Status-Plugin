@@ -1,0 +1,64 @@
+@font-face { font-family: 'Open Sans-Bold';
+             src: url('../font/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+             font-weight: bold;
+           }
+
+@font-face { font-family: 'Open Sans-BoldItalic';
+              src: url('../font/Open_Sans/OpenSans-BoldItalic.ttf') format('truetype');
+              font-weight: bold;
+              font-style: italic;
+            }
+
+@font-face { font-family: 'Open Sans-ExtraBold';
+              src: url('../font/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype');
+              font-weight:bolder;
+}
+
+@font-face { font-family: 'Open Sans-ExtraBoldItalic';
+              src: url('../font/Open_Sans/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+              font-weight:bolder;
+              font-style: italic;
+}
+
+@font-face { font-family: 'Open Sans-Italic';
+              src: url('../font/Open_Sans/OpenSans-Italic.ttf') format('truetype');
+              font-style: italic;
+}
+
+@font-face { font-family: 'Open Sans-Light';
+              src: url('../font/Open_Sans/OpenSans-Light.ttf') format('truetype');
+              font-weight: lighter;
+}
+
+@font-face { font-family: 'Open Sans-LightItalic';
+              src: url('../font/Open_Sans/OpenSans-LightItalic.ttf') format('truetype');
+              font-weight: lighter;
+              font-style: italic;
+}
+
+@font-face { font-family: 'Open Sans-Regular';
+              src: url('../font/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face { font-family: 'Open Sans-SemiBold';
+              src: url('../font/Open_Sans/OpenSans-SemiBold.ttf') format('truetype');
+              font-weight: 200;
+}
+
+@font-face { font-family: 'Open Sans-SemiBoldItalic';
+              src: url('../font/Open_Sans/OpenSans-SemiBoldItalic.ttf') format('truetype');
+              font-weight: 200;
+}
+
+
+:root {
+  --main-bg-color: #00327b;
+  --main-header-bg-color: linear-gradient(to bottom, rgba(2, 11, 69, 1) 40%, #003264 80%, #00327b);
+  --main-footer-bg-color: linear-gradient(to top, rgba(2, 11, 69, 1) 55%, #003264 80%, #00327b);
+  --main-border-color: #5363FF;
+  --main-button-bg-color: #010b44;
+  --main-font-color: rgba(255, 144, 46, 1);
+  --main-link-color: white;
+  --main-font-family: "Open Sans-Regular", Arial, Helvetica, sans-serif;
+  --header-font-family: "Open Sans-Light", Arial, Helvetica, sans-serif;
+}

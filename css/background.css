@@ -1,6 +1,6 @@
 html {
-  background-color: #010b44;
-  color: rgba(255, 144, 46, 1);
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
   margin: 0;
   padding: 0;
   width: 450px;
@@ -11,16 +11,18 @@ body {
   white-space: nowrap;
   text-align: center;
   padding-right: 2rem;
-  background-color: #00327b;
-  width: 100rem;;
+  background-color: var(--main-bg-color);
+  width: 100rem;
   height: 500px;
+  font-family: var(--main-font-family);
 }
 
 .header {
-  background:linear-gradient(to bottom, rgba(2, 11, 69, 1) 40%, #003264 80%, #00327b);
+  background:var(--main-header-bg-color);
   width: 30rem;
   padding-top: 30px;
   padding-bottom: 20px;
+  font-family: var(--header-font-family);
 }
 
 h1 {
@@ -29,7 +31,7 @@ h1 {
 
 
 main {
-  color: white;
+  color: var(--main-font-color);
   text-align: center;
   justify-content: center;
 }
@@ -59,8 +61,8 @@ td {
 }
 
 button {
-  background-color: #010b44;
-  border-color: #5363FF;
+  background-color: var(--main-button-bg-color);
+  border-color: var(--main-border-color);
   height: 40px;
   width: 40px;
   border-radius: 1em;
@@ -79,8 +81,8 @@ td a {
 
 .submit {
   cursor: pointer;
-  background-color: #010b44;
-  border-color: #5363FF;
+  background-color: var(--main-button-bg-color);
+  border-color: var(--main-border-color);
   border-width: 0.25em;
   height: 50px;
   width: 200px;
@@ -96,7 +98,7 @@ footer {
   margin-bottom: 0;
   position: fixed;
   display: flex;
-  background: linear-gradient(to top, rgba(2, 11, 69, 1) 55%, #003264 80%, #00327b);
+  background: var(--main-footer-bg-color);
   height: 100px;
   padding-top: 1rem;
   text-align: center;
