@@ -84,6 +84,7 @@ for (var i = 0; i < obj.data.length; i++) {
   function goodMorningV(stat_name, name) {
 
 
+<<<<<<< HEAD
     if (stat_name === "Ausgefallen") {
       new Notification(
         'Warnung!', {
@@ -93,6 +94,17 @@ for (var i = 0; i < obj.data.length; i++) {
       }
 
       else if (stat_name === "Wartungsarbeiten") {
+=======
+    if (stat_name === "Offline") {
+      new Notification(
+        'Warnung!', {
+          icon: '../icon128.png',
+          body: 'Der Server ' + name + ' ist Offline',
+        });
+      }
+
+      if (stat_name === "Wartung") {
+>>>>>>> master
         new Notification(
           'Wichtig!', {
             icon: '../icon128.png',
@@ -100,6 +112,7 @@ for (var i = 0; i < obj.data.length; i++) {
           });
         }
 
+<<<<<<< HEAD
       }
 
       let thead = $('<th/>', {
@@ -135,10 +148,55 @@ for (var i = 0; i < obj.data.length; i++) {
       $('#id_' + i).append(tlink);
 
       $('#ida_' + i).append(stat_name);
+=======
+        //else {
+          //new Notification(
+            //'Super', {
+              //icon: '../icon128.png',
+              //body: 'Alle Server in Ordnung',
+            //});
+          //}
+        }
+
+        let thead = $('<th/>', {
+          id: "hid_" + i,
+          class: "status_head"
+        })
+
+        let tbody = $('<td/>', {
+          id: "id_" + i,
+          class: "status_body"
+        })
+
+        let tlink = $('<a/>', {
+          id: "ida_" + i,
+          href: linka,
+          target: linktarget
+        })
+
+        let trow = $('<tr>', {
+          id: "root_" + i
+        })
+
+        $('#myHead').append($(trow));
+
+        $('#myBody').append($(trow));
+
+        $('#root_' + i).append($(thead));
+
+        $('#root_' + i).append($(tbody));
+
+        $('#hid_' + i).append(name);
+
+        $('#id_' + i).append(tlink);
+
+        $('#ida_' + i).append(stat_name);
+>>>>>>> master
 
 
 
 
+<<<<<<< HEAD
       //console.log();
       globalos(id, i);
       goodMorningV(stat_name, name);
@@ -150,6 +208,19 @@ for (var i = 0; i < obj.data.length; i++) {
 xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
 
 xhr.send(data);
+=======
+        //console.log();
+        globalos(id, i);
+        goodMorningV(stat_name, name);
+      }
+    }
+  });
+
+
+  xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
+
+  xhr.send(data);
+>>>>>>> master
 }
 
 TableCreator();
@@ -163,13 +234,18 @@ function Counter() {
   setInterval(function () {
     ClearTable();
     TableCreator();
+<<<<<<< HEAD
     console.log("Calling for Data");
   }, 60000);
+=======
+  }, 30000);
+>>>>>>> master
 }
 
 Counter();
 
 
+<<<<<<< HEAD
 
 
 
@@ -211,6 +287,8 @@ Counter();
 //chrome.tabs.getCurrent(function(){
   //document.getElementsByClassName('menuOverlayItemTitle').innerHTML;
 //};);
+=======
+>>>>>>> master
 //https://status.fearnixx.de/api/v1/components?sort=status=desc
 
 

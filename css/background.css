@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
   background-color: var(--main-bg-color);
   color: var(--main-font-color);
@@ -104,3 +105,82 @@ footer {
   text-align: center;
   justify-content: center;
 }
+=======
+html {
+  background-color: #5363FF;
+  margin-left: 0;
+  padding: 0;
+}
+body {
+  margin: 10px;
+  white-space: nowrap;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  border-style: inset;
+  border-width: 7px;
+  border-color: #539CFF;
+  margin: 1;
+  background-color: #539CFF;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+
+main {
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+
+ input, textarea {
+   width: 100%;
+ }
+
+textarea {
+  height: 200px;
+}
+
+table {
+  width: 70%;
+  margin-left: 30px;
+}
+
+tr {
+  margin-bottom: 50px;
+}
+
+td {
+  font-size: 20px;
+}
+
+button {
+  background-color: #5363FF;
+  border-color: #5363FF;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-image: url(../images/back.png);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+td a {
+  cursor: default;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: #5363FF;
+  border-color: #5363FF;
+  height: 50px;
+  width: 200px;
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+}
+>>>>>>> master
