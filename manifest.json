@@ -32,8 +32,7 @@
     "storage",
     "notifications",
     "http://*.fearnixx.de/", "https://*.fearnixx.de/",
-    "tabs",
-    "geolocation"
+    "tabs"
   ],
   "web_accessible_resources": [
     "icon128.png",
