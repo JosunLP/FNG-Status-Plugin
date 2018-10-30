@@ -44,12 +44,12 @@ function TableCreator() {
 
 
 for (var i = 0; i < obj.data.length; i++) {
-  let component = obj.data[i];
-  let id = obj.data[i];
-  let name = obj.data[i].name;
-  let stat_name = obj.data[i].status_name;
-  let linka = obj.data[i].link;
-  let linktarget;
+  var component = obj.data[i];
+  var id = obj.data[i];
+  var name = obj.data[i].name;
+  var stat_name = obj.data[i].status_name;
+  var linka = obj.data[i].link;
+  var linktarget;
 
   if (obj.data[i].link.length >= 2) {
     linktarget = "_blank";
@@ -81,26 +81,7 @@ for (var i = 0; i < obj.data.length; i++) {
   }
 
 
-  function goodMorningV(stat_name, name) {
 
-
-    if (stat_name === "Ausgefallen") {
-      new Notification(
-        'Warnung!', {
-          icon: '../icon128.png',
-          body: 'Der Server ' + name + ' ist Ausgefallen',
-        });
-      }
-
-      else if (stat_name === "Wartungsarbeiten") {
-        new Notification(
-          'Wichtig!', {
-            icon: '../icon128.png',
-            body: 'Der Server ' + name + ' ist in Wartung',
-          });
-        }
-
-      }
 
       let thead = $('<th/>', {
         id: "hid_" + i,
@@ -141,7 +122,7 @@ for (var i = 0; i < obj.data.length; i++) {
 
       //console.log();
       globalos(id, i);
-      goodMorningV(stat_name, name);
+      //goodMorningV(stat_name, name);
     }
   }
 });
@@ -154,6 +135,29 @@ xhr.send(data);
 
 TableCreator();
 
+function goodMorningV(stat_name, name) {
+
+  var status_name;
+  var name;
+
+  if (stat_name === "Ausgefallen") {
+    new Notification(
+      'Warnung!', {
+        icon: '../icon128.png',
+        body: 'Der Server ' + name + ' ist Ausgefallen',
+      });
+    }
+
+    else if (stat_name === "Wartungsarbeiten") {
+      new Notification(
+        'Wichtig!', {
+          icon: '../icon128.png',
+          body: 'Der Server ' + name + ' ist in Wartung',
+        });
+      }
+
+    }
+
 function ClearTable() {
   document.getElementById('myBody').innerHTML = "";
 }
@@ -164,10 +168,12 @@ function Counter() {
     ClearTable();
     TableCreator();
     console.log("Calling for Data");
-  }, 60000);
+  }, 240000);
 }
 
 Counter();
+
+
 
 
 
