@@ -131,9 +131,99 @@ for (var i = 0; i < obj.data.length; i++) {
 xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
 
 xhr.send(data);
+
+
+
+
+}
+
+function IssueCreator() {
+
+  var data_i = JSON.parse(true);
+
+  var xhb = new XMLHttpRequest();
+  xhb.withCredentials = true;
+
+  xhb.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      //console.log(this.responseText);
+      var json_n = this.responseText;
+      var obj_n = JSON.parse(json_n);
+
+      for (var i = 0; i < obj_n.data.length; i++) {
+        var id_n = obj_n.data[i];
+        var name_n = obj_n.data[i].name;
+        var message_n = obj_n.data[i].message;
+        var occurred_at = obj_n.data[i].occurred_at;
+        var created_at = obj_n.data[i].created_at;
+        var is_resolved = obj_n.data[i].is_resolved;
+        var notifications = obj_n.data[i].notifications;
+        var stickied = obj_n.data[i].stickied;
+        var human_status = obj_n.data[i].human_status;
+        var latest_icon = obj_n.data[i].latest_icon;
+
+        console.log(name_n);
+
+        let article_main = $('<div/>', {
+          id: "bodid_" + i,
+          class: "issue_main"
+        })
+
+        let article_head = $('<h3/>', {
+          id: "haid_" + i,
+          class: "issue_head"
+        })
+
+        let article_b = $('<p/>', {
+          id: "baid_" + i,
+          class: "issue_body"
+        })
+
+        let article_d_1 = $('<b/>', {
+          id: "daid_1_" + i,
+          class: "issue_d_1"
+        })
+
+        let article_d_2 = $('<b/>', {
+          id: "daid_2_" + i,
+          class: "issue_d_2"
+        })
+
+        let article_i = $('<i/>', {
+          id: "iaid_" + i,
+          class: latest_icon
+        })
+
+        let article_h = $('<b/>', {
+          id: "haid_" + i,
+          class: "issue_h",
+          color: "red"
+        })
+
+        $('#issues').append($(article_main));
+        $('#bodid_' + i).append($(article_head));
+        $('#haid_' + i).append($(obj_n.data[i].name));
+
+
+      }
+
+
+
+  }
+
+  });
+
+  console.log("Hello World");
+
+  xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents");
+
+  xhb.send(data_i);
+
 }
 
 TableCreator();
+
+IssueCreator();
 
 function goodMorningV(stat_name, name) {
 

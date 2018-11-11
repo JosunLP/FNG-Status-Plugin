@@ -48,33 +48,33 @@ function getCurrentTabUrl(callback) {
 
 
 
-function onswitch() {
+//function onswitch() {
 
-  var on = 1;
+  //var on = 1;
 
-  on = document.getElementsByClassName('className').innerHTML;
+  //on = document.getElementsByClassName('className').innerHTML;
 
-  console.log(on);
+  //console.log(on);
 
-  if (on == 1) {
-    goodMorningV();
-    console.log("Switch is On");
-    return;
-  }
+  //if (on == 1) {
+    //goodMorningV();
+    //console.log("Switch is On");
+    //return;
+  //}
 
-  else if (on == 0) {
-    console.log("Switch is Offline");
-    return;
-  }
+  //else if (on == 0) {
+    //console.log("Switch is Offline");
+    //return;
+  //}
 
-  else {
-    console.log("Es ist ein Fehler beim Switch aufgetreten");
-    return;
-  }
+  //else {
+    //console.log("Es ist ein Fehler beim Switch aufgetreten");
+    //return;
+  //}
 
-}
+//}
 
-onswitch();
+//onswitch();
 
 
 
