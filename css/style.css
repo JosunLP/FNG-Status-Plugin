@@ -126,6 +126,56 @@ article {
   display: inline-block;
 }
 
+/**** Issue Generator ****/
+.issues {
+  width: 90%;
+  margin-left: 5%;
+  padding: 1em;
+  margin-bottom: 9rem;
+  border-top: solid;
+}
+
+.issues h3 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: -0.4rem;
+}
+
+
+.issue_d_1, .issue_d_2 {
+  color: red;
+  margin-left: 2rem;
+}
+
+.issue_h {
+  margin-left: 2rem;
+}
+
+.issue_main {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.issue_head {
+
+}
+
+.issue_body {
+  display: flex;
+
+}
+
+.issues p {
+  font-size: 1rem;
+  margin-left: 2rem;
+  word-wrap: break-word;
+  overflow:auto;
+}
+
+/**** Footer ****/
 footer {
   bottom: 0;
   left: 0;

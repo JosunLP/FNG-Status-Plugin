@@ -80,6 +80,29 @@ for (var i = 0; i < obj.data.length; i++) {
     }
   }
 
+  function goodMorningV(stat_name, name) {
+
+    var status_name;
+    var name;
+
+    if (stat_name === "Ausgefallen") {
+      new Notification(
+        'Warnung!', {
+          icon: '../icon128.png',
+          body: 'Der Server ' + name + ' ist Ausgefallen',
+        });
+      }
+
+      else if (stat_name === "Wartungsarbeiten") {
+        new Notification(
+          'Wichtig!', {
+            icon: '../icon128.png',
+            body: 'Der Server ' + name + ' ist in Wartung',
+          });
+        }
+
+      }
+
 
 
 
@@ -162,7 +185,6 @@ function IssueCreator() {
         var human_status = obj_n.data[i].human_status;
         var latest_icon = obj_n.data[i].latest_icon;
 
-        console.log(name_n);
 
         let article_main = $('<div/>', {
           id: "bodid_" + i,
@@ -171,7 +193,8 @@ function IssueCreator() {
 
         let article_head = $('<h3/>', {
           id: "haid_" + i,
-          class: "issue_head"
+          class: "issue_head",
+          title: name_n
         })
 
         let article_b = $('<p/>', {
@@ -191,18 +214,37 @@ function IssueCreator() {
 
         let article_i = $('<i/>', {
           id: "iaid_" + i,
-          class: latest_icon
+          class: "fas fa-flag"
         })
 
         let article_h = $('<b/>', {
-          id: "haid_" + i,
+          id: "haidh_" + i,
           class: "issue_h",
           color: "red"
         })
 
+
+        let = createt = "Erstellt am: " + created_at;
+
+        let = occurred = "Aufgetreten am: " + occurred_at;
+
+        let = hstatus = "Aktueller Status: " +  human_status;
+
+        // First Stage generation
         $('#issues').append($(article_main));
+        $('#bodid_' + i).append($(article_i));
         $('#bodid_' + i).append($(article_head));
-        $('#haid_' + i).append($(obj_n.data[i].name));
+        $('#bodid_' + i).append($(article_d_1));
+        $('#bodid_' + i).append($(article_d_2));
+        $('#bodid_' + i).append($(article_b));
+        $('#bodid_' + i).append($(article_h));
+
+        // Seccond Stage generation
+        document.getElementById('haid_' + i).innerHTML = name_n;
+        document.getElementById('daid_1_' + i).innerHTML = occurred;
+        document.getElementById('daid_1_' + i).innerHTML = createt;
+        document.getElementById('haidh_' + i).innerHTML = hstatus;
+        document.getElementById('baid_' + i).innerHTML = message_n;
 
 
       }
@@ -219,34 +261,15 @@ function IssueCreator() {
 
   xhb.send(data_i);
 
+
+
 }
 
 TableCreator();
 
 IssueCreator();
 
-function goodMorningV(stat_name, name) {
 
-  var status_name;
-  var name;
-
-  if (stat_name === "Ausgefallen") {
-    new Notification(
-      'Warnung!', {
-        icon: '../icon128.png',
-        body: 'Der Server ' + name + ' ist Ausgefallen',
-      });
-    }
-
-    else if (stat_name === "Wartungsarbeiten") {
-      new Notification(
-        'Wichtig!', {
-          icon: '../icon128.png',
-          body: 'Der Server ' + name + ' ist in Wartung',
-        });
-      }
-
-    }
 
 function ClearTable() {
   document.getElementById('myBody').innerHTML = "";
