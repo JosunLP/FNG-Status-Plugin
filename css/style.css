@@ -11,7 +11,7 @@ body {
   width: 700px;
   height: 900px;
   text-align: center;
-  border-style: solid;
+  border-right-style: solid;
   border-left-style: none;
   border-width: 7px;
   border-color: var(--main-border-color);
