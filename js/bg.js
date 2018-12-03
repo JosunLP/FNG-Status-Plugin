@@ -1,3 +1,18 @@
+chrome.runtime.onInstalled.addListener(function() {
+    chrome.contextMenus.create({
+      "id": "sampleContextMenu",
+      "title": "Sample Context Menu",
+      "contexts": ["selection"]
+    });
+
+  });
+
+
+
+
+
+
+
 // request permission on page load
 document.addEventListener('DOMContentLoaded', function () {
   if (!Notification) {
