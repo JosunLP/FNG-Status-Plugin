@@ -1,3 +1,23 @@
+function wertHolen () {
+  var Wert = "";
+  if (document.cookie) {
+    var Wertstart = document.cookie.indexOf("=") + 1;
+    var Wertende = document.cookie.indexOf(";");
+    if (Wertende == -1) {
+      Wertende = document.cookie.length;
+	}
+	Wert = document.cookie.substring(Wertstart, Wertende);
+  }
+  return Wert;
+}
+
+function wertSetzen (Bezeichner, Wert, Verfall) {
+  var jetzt = new Date();
+  var Auszeit = new Date(jetzt.getTime() + Verfall);
+  document.cookie = Bezeichner + "=" + Wert + "; expires=" + Auszeit.toGMTString() + ";";
+}
+
+
 
 // request permission on page load
 document.addEventListener('DOMContentLoaded', function () {
@@ -79,26 +99,33 @@ for (var i = 0; i < obj.data.length; i++) {
       get_it.classList.add("redRocket");
     }
   }
-
+  
+    
+    
+  
   function goodMorningV(stat_name, name) {
 
     var status_name;
     var name;
 
     if (stat_name === "Ausgefallen") {
-      new Notification(
+        
+        
+      /*new Notification(
         'Warnung!', {
           icon: '../icon128.png',
           body: 'Der Server ' + name + ' ist Ausgefallen',
-        });
+        });*/
       }
 
       else if (stat_name === "Wartungsarbeiten") {
-        new Notification(
+          
+          
+        /*new Notification(
           'Wichtig!', {
             icon: '../icon128.png',
             body: 'Der Server ' + name + ' ist in Wartung',
-          });
+          });*/
         }
 
       }
