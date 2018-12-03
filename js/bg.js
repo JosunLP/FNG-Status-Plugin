@@ -19,6 +19,7 @@ function wertSetzen (Bezeichner, Wert, Verfall) {
 
 
 
+
 // request permission on page load
 document.addEventListener('DOMContentLoaded', function () {
   if (!Notification) {
@@ -110,7 +111,9 @@ for (var i = 0; i < obj.data.length; i++) {
 
     if (stat_name === "Ausgefallen") {
         
+        wertSetzen()
         
+        //https://wiki.selfhtml.org/wiki/JavaScript/Tutorials/cookies
       /*new Notification(
         'Warnung!', {
           icon: '../icon128.png',
