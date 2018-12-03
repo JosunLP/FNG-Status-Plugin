@@ -44,8 +44,6 @@ function goodMorningV(stat_name, name) {
     if (stat_name === "Ausgefallen") {
 
       wertSetzen("Status_1", "Ausgefallen", 1000 * 60 * 60 * 24 * 1);
-      //wertSetzen("Ausgefallen", name, 1000 * 60 * 60 * 24 * 0);
-
 
     /*new Notification(
       'Warnung!', {
@@ -58,7 +56,6 @@ function goodMorningV(stat_name, name) {
 
 
       wertSetzen("Status_2", "Wartungsarbeiten", 1000 * 60 * 60 * 24 * 1);
-      //wertSetzen("Wartungsarbeiten", name, 1000 * 60 * 60 * 24 * 0);
 
       /*new Notification(
         'Wichtig!', {
@@ -70,3 +67,13 @@ function goodMorningV(stat_name, name) {
       console.log("Cookie: " + document.cookie);
 
   }
+
+function ChangeMe() {
+  setInterval(function () {
+    let cookies = document.cookie;
+    cookies.onchange = function(){
+      notifierCreate();
+      cleanRoom();
+    }
+  }, 10000);
+}

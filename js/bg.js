@@ -5,8 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  if (Notification.permission !== "granted")
+  if (Notification.permission !== "granted") {
   Notification.requestPermission();
+  }
+
+  ChangeMe();
 });
 
 
@@ -24,19 +27,7 @@ function TableCreator() {
       //console.log(this.responseText);
       var json = this.responseText;
       var obj = JSON.parse(json);
-      /*
-      function globalos(id, nr) {
-      var temp = obj.data[nr].status;
-      if (temp == 1) {
-      $("td").addClass("greenThumb");
-      $("td").removeClass("redRocket");
-    }
-    if (temp == 4){
-    $("td").addClass("redRocket");
-    $("td").removeClass("greenThumb");
-  }
-}
-*/
+
 
 
 
