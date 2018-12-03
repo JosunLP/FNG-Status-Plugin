@@ -111,7 +111,7 @@ for (var i = 0; i < obj.data.length; i++) {
 
     if (stat_name === "Ausgefallen") {
         
-        wertSetzen()
+        
         
         //https://wiki.selfhtml.org/wiki/JavaScript/Tutorials/cookies
       /*new Notification(
@@ -132,7 +132,7 @@ for (var i = 0; i < obj.data.length; i++) {
         }
 
       }
-
+    console.log("Cookie: " + document.cookie);
 
 
 
