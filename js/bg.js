@@ -271,6 +271,8 @@ Counter();
 function proof()  {
   var inc = document.getElementsByClassName("issues").innerHTML;
 
+  
+
   if (inc != "") {
     let notification = new Notification("An error has occurred!", {
     body: 'Es ist ein Fehler Aufgetreten, bitte überprüfe die Fehlerbenachrichtigung! ',
