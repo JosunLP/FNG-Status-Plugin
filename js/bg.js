@@ -206,11 +206,11 @@ function IssueCreator() {
         })
 
 
-        let = createt = "Erstellt am: " + created_at;
+        var  createt = "Erstellt am: " + created_at;
 
-        let = occurred = "Aufgetreten am: " + occurred_at;
+        var  occurred = "Aufgetreten am: " + occurred_at;
 
-        let = hstatus = "Aktueller Status: " +  human_status;
+        var  hstatus = "Aktueller Status: " +  human_status;
 
         // First Stage generation
         $('#issues').append($(article_main));
@@ -239,10 +239,10 @@ function IssueCreator() {
 
   console.log("Hello World");
 
-  xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents");
+  xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents?per_page=4&status=3");
 
   xhb.send(data_i);
-
+  proof()
 
 
 }
@@ -268,7 +268,25 @@ function Counter() {
 Counter();
 
 
+function proof()  {
+  var inc = document.getElementsByClassName("issues").innerHTML;
 
+  if (inc != "") {
+    let notification = new Notification("An error has occurred!", {
+    body: 'Es ist ein Fehler Aufgetreten, bitte überprüfe die Fehlerbenachrichtigung! ',
+    icon: '../icon128.png',
+    tag: '1337',
+    dir: 'auto',
+    lang: 'de'
+    });
+  }
+  else {
+    return;
+  }
+
+
+
+}
 
 
 
