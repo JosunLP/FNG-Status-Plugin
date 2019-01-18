@@ -206,11 +206,11 @@ function IssueCreator() {
         })
 
 
-        let = createt = "Erstellt am: " + created_at;
+        var  createt = "Erstellt am: " + created_at;
 
-        let = occurred = "Aufgetreten am: " + occurred_at;
+        var  occurred = "Aufgetreten am: " + occurred_at;
 
-        let = hstatus = "Aktueller Status: " +  human_status;
+        var  hstatus = "Aktueller Status: " +  human_status;
 
         // First Stage generation
         $('#issues').append($(article_main));
@@ -228,6 +228,8 @@ function IssueCreator() {
         document.getElementById('haidh_' + i).innerHTML = hstatus;
         document.getElementById('baid_' + i).innerHTML = message_n;
 
+        document.getElementById('baid_' + i).append(" Weitere Informationen zu dem Vorfall finden sie unter https://status.fearnixx.de");
+
 
       }
 
@@ -237,12 +239,12 @@ function IssueCreator() {
 
   });
 
-  console.log("Hello World");
+  //console.log("Hello World");
 
-  xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents");
+  xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents?sort=id&per_page=4&status=1&status=2&status=3");
 
   xhb.send(data_i);
-
+  proof()
 
 
 }
@@ -252,19 +254,6 @@ TableCreator();
 IssueCreator();
 
 
-
-function ClearTable() {
-  document.getElementById('myBody').innerHTML = "";
-}
-
-
-function Counter() {
-  setInterval(function () {
-    ClearTable();
-    TableCreator();
-    console.log("Calling for Data");
-  }, 240000);
-}
 Counter();
 
 

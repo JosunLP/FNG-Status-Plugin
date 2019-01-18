@@ -1,3 +1,41 @@
+function ClearTable() {
+  document.getElementById('myBody').innerHTML = "";
+}
+
+
+function Counter() {
+  setInterval(function () {
+    ClearTable();
+    TableCreator();
+    console.log("Calling for Data");
+  }, 240000);
+}
+
+
+function proof()  {
+  var inc = document.getElementsByClassName("issues").innerHTML;
+
+
+
+  if (inc != "") {
+    let notification = new Notification("An error has occurred!", {
+    body: 'Es ist ein Fehler Aufgetreten, bitte überprüfe die Fehlerbenachrichtigung! ',
+    icon: '../icon128.png',
+    tag: '1337',
+    dir: 'auto',
+    lang: 'de'
+    });
+  }
+  else {
+    return;
+  }
+
+
+
+}
+
+
+
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -64,7 +102,7 @@ function goodMorningV(stat_name, name) {
         });*/
       }
 
-      console.log("Cookie: " + document.cookie);
+      //console.log("Cookie: " + document.cookie);
 
   }
 
