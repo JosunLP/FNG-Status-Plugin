@@ -3,7 +3,7 @@
 
   "name": "FNG Server Status Plugin",
   "description": "This extension allows the user to show the status of the FearNixx Gaming services",
-  "version": "0.1.7",
+  "version": "0.1.8",
 
   "content_scripts": [{
     "css":["css/page.css"],
@@ -12,8 +12,8 @@
   }],
 
   "icons": { "16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png"
+             "48": "icon48.png",
+            "128": "icon128.png"
   },
 
   "browser_action": {
