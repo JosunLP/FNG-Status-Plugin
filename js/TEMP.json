@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "pagination": {
+      "total": 1,
+      "count": 1,
+      "per_page": 2,
+      "current_page": 1,
+      "total_pages": 1,
+      "links": {
+        "next_page": null,
+        "previous_page": null
+      }
+    }
+  },
+  "data": [
+    {
+      "id": 2,
+      "user_id": 1,
+      "component_id": 0,
+      "name": "Musikbot-Panel au\u00dfer Funktion",
+      "status": 1,
+      "visible": 1,
+      "stickied": true,
+      "notifications": false,
+      "message": "\u00dcber [musik.fearnixx.de](https:\/\/musik.fearnixx.de) kann im Moment keine Musik gestartet werden.  \r\nWir haben daher die gesamte Anwendung ersteinmal in den Wartungsmodus geschickt.  \r\nMorgen (Sonntag) werden wir den Grund daf\u00fcr untersuchen.  ",
+      "occurred_at": "2018-11-10 22:00:00",
+      "created_at": "2018-11-10 23:52:15",
+      "updated_at": "2018-11-10 23:52:15",
+      "deleted_at": null,
+      "is_resolved": false,
+      "meta": [
+
+      ],
+      "updates": [
+
+      ],
+      "human_status": "Untersuchungen laufen",
+      "latest_update_id": null,
+      "latest_status": 1,
+      "latest_human_status": "Untersuchungen laufen",
+      "latest_icon": "icon ion-flag oranges",
+      "permalink": "https:\/\/status.fearnixx.de\/incidents\/2",
+      "duration": 0
+    }
+  ]
+}

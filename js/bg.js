@@ -1,3 +1,17 @@
+chrome.runtime.onInstalled.addListener(function() {
+    chrome.contextMenus.create({
+      "id": "sampleContextMenu",
+      "title": "Sample Context Menu",
+      "contexts": ["selection"]
+    });
+
+  });
+
+
+
+
+
+
 
 // request permission on page load
 document.addEventListener('DOMContentLoaded', function () {
@@ -6,8 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  if (Notification.permission !== "granted")
+  if (Notification.permission !== "granted") {
   Notification.requestPermission();
+  }
+
+  ChangeMe();
 });
 
 
@@ -25,31 +42,19 @@ function TableCreator() {
       //console.log(this.responseText);
       var json = this.responseText;
       var obj = JSON.parse(json);
-      /*
-      function globalos(id, nr) {
-      var temp = obj.data[nr].status;
-      if (temp == 1) {
-      $("td").addClass("greenThumb");
-      $("td").removeClass("redRocket");
-    }
-    if (temp == 4){
-    $("td").addClass("redRocket");
-    $("td").removeClass("greenThumb");
-  }
-}
-*/
+
 
 
 
 
 
 for (var i = 0; i < obj.data.length; i++) {
-  let component = obj.data[i];
-  let id = obj.data[i];
-  let name = obj.data[i].name;
-  let stat_name = obj.data[i].status_name;
-  let linka = obj.data[i].link;
-  let linktarget;
+  var component = obj.data[i];
+  var id = obj.data[i];
+  var name = obj.data[i].name;
+  var stat_name = obj.data[i].status_name;
+  var linka = obj.data[i].link;
+  var linktarget;
 
   if (obj.data[i].link.length >= 2) {
     linktarget = "_blank";
@@ -81,39 +86,7 @@ for (var i = 0; i < obj.data.length; i++) {
   }
 
 
-  function goodMorningV(stat_name, name) {
 
-
-<<<<<<< HEAD
-    if (stat_name === "Ausgefallen") {
-      new Notification(
-        'Warnung!', {
-          icon: '../icon128.png',
-          body: 'Der Server ' + name + ' ist Ausgefallen',
-        });
-      }
-
-      else if (stat_name === "Wartungsarbeiten") {
-=======
-    if (stat_name === "Offline") {
-      new Notification(
-        'Warnung!', {
-          icon: '../icon128.png',
-          body: 'Der Server ' + name + ' ist Offline',
-        });
-      }
-
-      if (stat_name === "Wartung") {
->>>>>>> master
-        new Notification(
-          'Wichtig!', {
-            icon: '../icon128.png',
-            body: 'Der Server ' + name + ' ist in Wartung',
-          });
-        }
-
-<<<<<<< HEAD
-      }
 
       let thead = $('<th/>', {
         id: "hid_" + i,
@@ -208,44 +181,130 @@ for (var i = 0; i < obj.data.length; i++) {
 xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
 
 xhr.send(data);
-=======
-        //console.log();
-        globalos(id, i);
-        goodMorningV(stat_name, name);
+
+
+
+
+}
+
+function IssueCreator() {
+
+  var data_i = JSON.parse(true);
+
+  var xhb = new XMLHttpRequest();
+  xhb.withCredentials = true;
+
+  xhb.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+      //console.log(this.responseText);
+      var json_n = this.responseText;
+      var obj_n = JSON.parse(json_n);
+
+      for (var i = 0; i < obj_n.data.length; i++) {
+        var id_n = obj_n.data[i];
+        var name_n = obj_n.data[i].name;
+        var message_n = obj_n.data[i].message;
+        var occurred_at = obj_n.data[i].occurred_at;
+        var created_at = obj_n.data[i].created_at;
+        var is_resolved = obj_n.data[i].is_resolved;
+        var notifications = obj_n.data[i].notifications;
+        var stickied = obj_n.data[i].stickied;
+        var human_status = obj_n.data[i].human_status;
+        var latest_icon = obj_n.data[i].latest_icon;
+
+
+        let article_main = $('<div/>', {
+          id: "bodid_" + i,
+          class: "issue_main"
+        })
+
+        let article_head = $('<h3/>', {
+          id: "haid_" + i,
+          class: "issue_head",
+          title: name_n
+        })
+
+        let article_b = $('<p/>', {
+          id: "baid_" + i,
+          class: "issue_body"
+        })
+
+        let article_d_1 = $('<b/>', {
+          id: "daid_1_" + i,
+          class: "issue_d_1"
+        })
+
+        let article_d_2 = $('<b/>', {
+          id: "daid_2_" + i,
+          class: "issue_d_2"
+        })
+
+        let article_i = $('<i/>', {
+          id: "iaid_" + i,
+          class: "fas fa-flag"
+        })
+
+        let article_h = $('<b/>', {
+          id: "haidh_" + i,
+          class: "issue_h",
+          color: "red"
+        })
+
+
+        var  createt = "Erstellt am: " + created_at;
+
+        var  occurred = "Aufgetreten am: " + occurred_at;
+
+        var  hstatus = "Aktueller Status: " +  human_status;
+
+        // First Stage generation
+        $('#issues').append($(article_main));
+        $('#bodid_' + i).append($(article_i));
+        $('#bodid_' + i).append($(article_head));
+        $('#bodid_' + i).append($(article_d_1));
+        $('#bodid_' + i).append($(article_d_2));
+        $('#bodid_' + i).append($(article_b));
+        $('#bodid_' + i).append($(article_h));
+
+        // Seccond Stage generation
+        document.getElementById('haid_' + i).innerHTML = name_n;
+        document.getElementById('daid_1_' + i).innerHTML = occurred;
+        document.getElementById('daid_1_' + i).innerHTML = createt;
+        document.getElementById('haidh_' + i).innerHTML = hstatus;
+        document.getElementById('baid_' + i).innerHTML = message_n;
+
+        document.getElementById('baid_' + i).append(" Weitere Informationen zu dem Vorfall finden sie unter https://status.fearnixx.de");
+
+
       }
-    }
+
+
+
+  }
+
   });
 
+  //console.log("Hello World");
 
-  xhr.open("GET", "https://status.fearnixx.de/api/v1/components?sort=status=desc");
+  xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents?sort=id&per_page=4&status=1&status=2&status=3");
 
-  xhr.send(data);
->>>>>>> master
+  xhb.send(data_i);
+  proof()
+
+
 }
 
 TableCreator();
 
-function ClearTable() {
-  document.getElementById('myBody').innerHTML = "";
-}
+IssueCreator();
 
-
-function Counter() {
-  setInterval(function () {
-    ClearTable();
-    TableCreator();
-<<<<<<< HEAD
-    console.log("Calling for Data");
-  }, 60000);
-=======
-  }, 30000);
->>>>>>> master
-}
 
 Counter();
 
 
 <<<<<<< HEAD
+
+
 
 
 
