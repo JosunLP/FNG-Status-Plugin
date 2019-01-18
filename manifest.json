@@ -10,9 +10,6 @@
     "js": ["js/page.js"],
     "matches": ["https://fearnixx.de/"]
   }],
-=======
-  "version": "0.1.5",
->>>>>>> master
 
   "icons": { "16": "icon16.png",
            "48": "icon48.png",
@@ -35,16 +32,8 @@
     "cookies",
     "storage",
     "notifications",
-<<<<<<< HEAD
     "http://*.fearnixx.de/", "https://*.fearnixx.de/",
     "tabs"
-  ],
-  "web_accessible_resources": [
-    "icon128.png",
-    "js/bg.js"
-=======
-    "http://*.fearnixx.de/", "https://*.fearnixx.de/"
->>>>>>> master
   ],
   "web_accessible_resources": [
     "icon128.png",

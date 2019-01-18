@@ -1,11 +1,6 @@
 html {
-<<<<<<< HEAD
   background-color: var(--main-bg-color);
   color: var(--main-font-color);
-=======
-  background-color: #5363FF;
-  color: white;
->>>>>>> master
   margin-left: 0;
   padding: 0;
 }
@@ -19,18 +14,11 @@ body {
   border-right-style: solid;
   border-left-style: none;
   border-width: 7px;
-<<<<<<< HEAD
   border-color: var(--main-border-color);
   margin: 1px;
   background-color: var(--main-bg-color);
   color: var(--main-font-color);
   font-family: var(--main-font-family);
-=======
-  border-color: #3541b2;
-  margin: 1px;
-  background-color: #539CFF;
-  color:white;
->>>>>>> master
 }
 
 .logo {
@@ -42,7 +30,6 @@ body {
 
 h1 {
   font-size: 32px;
-<<<<<<< HEAD
   color: var(--main-font-color);
   font-family: var(--header-font-family);
 }
@@ -89,59 +76,10 @@ table {
   margin-top: 110px;
   font-size: 1rem;
   color: var(--main-font-color);
-=======
-  color: white;
-}
-
-p, a{
-  color:white;
-}
-
-
-.headlines {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-
-table {
-  margin-top: 110px;
-  font-size: 1rem;
-  color: white;
 }
 
 
 
-button {
-  background-color: #5363FF;
-  border-color: #5363FF;
-  height: 30px;
-  width: 100px;
-  border-radius: 100%;
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-  color: white;
-  font-size: 10px;
-}
-
-th {
-  background-color: white;
-  color: #5363FF;
-}
-
-
-.table .status_head,.table .status_body {
-  padding: 0px;
-  padding-top: 7px;
-  padding-bottom: 7px;
->>>>>>> master
-}
-
-
-
-<<<<<<< HEAD
 button {
   background-color: var(--main-button-bg-color);
   border-color: var(--main-border-color);
@@ -154,18 +92,6 @@ button {
   cursor: pointer;
   color: var(--main-font-color);
   font-size: 10px;
-=======
-footer {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-bottom: 0;
-  position: fixed;
-  background-color: #5363FF;
-  border-top-style: solid;
-  border-top-width: 7px;
-  border-top-color: #3541b2;
->>>>>>> master
 }
 
 button:hover {
@@ -269,24 +195,6 @@ footer {
 }
 
 
-=======
-.header {
-  background-color: #5363FF;
-  border-bottom-style: solid;
-  border-bottom-width: 7px;
-  border-top-width: 7px;
-  border-bottom-color: #539CFF;
-  border-top-color: #5363FF;
-  border-left-width: 9px;
-  position: fixed;
-  width: 100%;
-  margin-top: -17px;
-  padding-bottom: 20px;
-  border-color: #3541b2;
-  border-style: solid;
-}
-
->>>>>>> master
 .redRocket {
   color: red;
   text-decoration-line: underline;
