@@ -228,6 +228,8 @@ function IssueCreator() {
         document.getElementById('haidh_' + i).innerHTML = hstatus;
         document.getElementById('baid_' + i).innerHTML = message_n;
 
+        document.getElementById('baid_' + i).append(" Weitere Informationen zu dem Vorfall finden sie unter https://status.fearnixx.de");
+
 
       }
 
@@ -237,7 +239,7 @@ function IssueCreator() {
 
   });
 
-  console.log("Hello World");
+  //console.log("Hello World");
 
   xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents?per_page=4&status=3");
 
@@ -252,43 +254,10 @@ TableCreator();
 IssueCreator();
 
 
-
-function ClearTable() {
-  document.getElementById('myBody').innerHTML = "";
-}
-
-
-function Counter() {
-  setInterval(function () {
-    ClearTable();
-    TableCreator();
-    console.log("Calling for Data");
-  }, 240000);
-}
 Counter();
 
 
-function proof()  {
-  var inc = document.getElementsByClassName("issues").innerHTML;
 
-  
-
-  if (inc != "") {
-    let notification = new Notification("An error has occurred!", {
-    body: 'Es ist ein Fehler Aufgetreten, bitte überprüfe die Fehlerbenachrichtigung! ',
-    icon: '../icon128.png',
-    tag: '1337',
-    dir: 'auto',
-    lang: 'de'
-    });
-  }
-  else {
-    return;
-  }
-
-
-
-}
 
 
 

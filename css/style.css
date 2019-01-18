@@ -164,8 +164,6 @@ article {
 }
 
 .issue_body {
-  display: flex;
-
 }
 
 .issues p {
@@ -173,6 +171,12 @@ article {
   margin-left: 2rem;
   word-wrap: break-word;
   overflow:auto;
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  height: auto;
+  white-space: normal;
+  text-align: left;
 }
 
 /**** Footer ****/
