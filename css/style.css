@@ -5,6 +5,23 @@ html {
   padding: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3541b2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-border-color);
+}
+
+
+
 body {
   margin: 10px;
   white-space: nowrap;
@@ -15,7 +32,7 @@ body {
   border-left-style: none;
   border-width: 7px;
   border-color: var(--main-border-color);
-  margin: 1px;
+  margin: 0px;
   background-color: var(--main-bg-color);
   color: var(--main-font-color);
   font-family: var(--main-font-family);
@@ -30,6 +47,7 @@ body {
 
 h1 {
   font-size: 32px;
+  padding-top: 25px;
   color: var(--main-font-color);
   font-family: var(--header-font-family);
 }

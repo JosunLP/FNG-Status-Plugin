@@ -7,6 +7,22 @@ html {
   height: 500px;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3541b2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-border-color);
+}
+
+
 body {
   white-space: nowrap;
   text-align: center;
@@ -27,6 +43,7 @@ body {
 
 h1 {
   font-size: 28px;
+  padding-right: 35px;
 }
 
 
@@ -48,7 +65,7 @@ textarea {
 
 table {
   width: 350px;
-  margin-left: 30px;
+  margin-left: 10px;
   margin-top: 0.5rem;
 }
 
@@ -63,16 +80,18 @@ td {
 button {
   background-color: var(--main-button-bg-color);
   border-color: var(--main-border-color);
-  height: 40px;
-  width: 40px;
-  border-radius: 1em;
+  height: 60px;
+  width: 60px;
+  border-radius: 3em;
   border-width: 0.25em;
   background-image: url(../images/back.png);
   background-position: center;
   background-size: cover;
   cursor: pointer;
-  margin: 1rem;
-  padding: 1.5em;
+}
+
+button:hover {
+  background-color:#00327b;
 }
 
 td a {
@@ -89,6 +108,10 @@ td a {
   border-radius: 2rem;
   color: white;
   font-size: 16px;
+}
+
+.submit:hover {
+  background-color:#00327b;
 }
 
 footer {
