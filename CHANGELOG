@@ -1,6 +1,15 @@
 # __FearNixx Status Plugin__
 
-### Version_1.1.8
+### Version_0.1.9
+
+--------------------------------------------------------------------------------
+
+In version 0.1.9, we're doing a graphical overhaul to fix some scroll glitches
+and also a new scroll bar is added.
+
+--------------------------------------------------------------------------------
+
+### Version_0.1.8
 
 --------------------------------------------------------------------------------
 
@@ -9,7 +18,7 @@ Fixing the line Break Error in the Issue Tabs and also adding a new Line.
 --------------------------------------------------------------------------------
 
 
-### Version_1.1.7
+### Version_0.1.7
 
 --------------------------------------------------------------------------------
 
@@ -18,17 +27,17 @@ Adding overview over Events
 --------------------------------------------------------------------------------
 
 
-### Version_1.1.5
+### Version_0.1.5
 
 --------------------------------------------------------------------------------
 
 Beta release of the _Fearnixx Status App_ for the _Fearnixx Gaming Community_.
-In version 1.1.5, the notifications have been redesigned and the app is nearing
+In version 0.1.5, the notifications have been redesigned and the app is nearing
 its release.
 
 --------------------------------------------------------------------------------
 
-### Version_1.1.4
+### Version_0.1.4
 
 --------------------------------------------------------------------------------
 
@@ -37,7 +46,7 @@ FearNixx. For use, a file must be placed on the server and
 be registered in the code. In the following versions this will be a config
 File created.
 
-New features of Version_1.1.4 include the new structure and the
+New features of Version_0.1.4 include the new structure and the
 Liquid generation of new servers in the table. Furthermore, the
 App supported by a temporary alert feature, which lists all
 Servers that are offline.
