@@ -1,12 +1,11 @@
 # __FearNixx Status Plugin__
 
-### Version_1.1.6
+### Version_0.1.9
 
 --------------------------------------------------------------------------------
 
-Beta release of the _Fearnixx Status App_ for the _Fearnixx Gaming Community_.
-
-In version 1.1.6 there is a complete redesign, adapted to the new FearNixx Webiste. In addition, there are some new features, including tooltips for the social icons and a new, user-friendly update count.
+This extension allows the user to show the status of the FearNixx Gaming services.
+This Chrome extension is for members of the FearNixx Gaming Community. It offers the possibility to query the current server status of all game and function servers. It also provides a contact form for direct communication with the FearNixx Gaming Community team. This extension informs the user about the current server status of our applications!
 
 --------------------------------------------------------------------------------
 
