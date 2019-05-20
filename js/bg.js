@@ -244,7 +244,6 @@ function IssueCreator() {
   xhb.open("GET", "https://status.fearnixx.de/api/v1/incidents?sort=id&per_page=4&status=1&status=2&status=3");
 
   xhb.send(data_i);
-  proof()
 
 
 }
