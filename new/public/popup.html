@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>FearNixx Server Status</title>
+  <meta charset="utf-8">
+  <script defer src="fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+  <link rel="stylesheet" href="css/main.css" >
+  <link rel="stylesheet" href="css/bootstrap.min.css" >
+  <script src="js/function.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="css/jquery.dynatable.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" onload="CreateTable()"></script>
+
+</head>
+
+<body>
+  <section class="header">
+    <img src="images/icon128.png" alt="logo" class="logo">
+    <h1>FNG Server Status</h1>
+    <div class="greetings" id="greetings">
+      <span class="greet" id="greet"></span>
+    </div>
+  </section>
+  <div class="container-fluid">
+
+    <!--<iframe src="https://fearnixx.de/status/public/" width="400px" height="800px"></iframe>-->
+    <section class="headlines">
+
+      <table class="table" id="myTable">
+        <!-- each head three headlines and each body three answers!!-->
+        <thead id="myHead">
+
+        </thead>
+        <tbody id="myBody">
+
+        </tbody>
+
+
+
+      </table>
+
+    </section>
+
+    <section class="content">
+
+      <div class="issues" id="issues">
+
+      </div>
+
+
+
+    </section>
+
+
+
+  </div>
+  <footer>
+
+    <div class="sideBox">
+      <span class="pageURL" id="pageURL"></span>
+    </div>
+
+
+    <script type="text/javascript" src="js/bg.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+    <a href="background.html"> <button type="button" name="button">Kontakt Formular</button> </a>
+    <div class="icons">
+      <!--brand icon-->
+      <a href="https://gitlab.com/fearnixxgaming" target="_blank" title="FearNixx Gitlab"><i class="fab fa-gitlab"></i></a>
+      <a href="https://www.youtube.com/channel/UCJz6mH7GCLM9lB7tVdeGdmQ" target="_blank" title="FearNixx Youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/FearNixx-Gaming-129194737555494/" target="_blank" title="FearNixx Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/FearNixxGaming" target="_blank"><i class="fab fa-twitter" title="FearNixx Twitter"></i></a>
+      <a href="https://fearnixx.de/datenschutzerklaerung/" target="_blank" title="Datenschutzerklärung"><i class="fas fa-info fa-fw"></i></a>
+      <a href="https://fearnixx.de/legal-notice/" target="_blank" title="Impressum"><i class="fas fa-address-card"></i></a>
+      <a href="https://fearnixx.de" target="_blank" title="FearNixx Website"><i class="fas fa-building"></i></a>
+
+
+
+
+
+    </div>
+
+    <p class="bottom">Klicke <a href="https://status.fearnixx.de/subscribe" target="_blank">hier</a>, um E-Mails zu erhalten, wenn sich ein Dienst-Status ändert.</p>
+
+
+
+  </footer>
+</body>
+
+  <!--
+         ____.               __   _________ __                _______                              .__
+        |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+       |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
+  /\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
+  \________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
+                      \/              \/           \/\/            \/                   \/     \/
+-->
+
+</html>
