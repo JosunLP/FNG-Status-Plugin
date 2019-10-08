@@ -1,0 +1,240 @@
+html {
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  margin-left: 0;
+  padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3541b2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-border-color);
+}
+
+
+
+body {
+  margin: 10px;
+  white-space: nowrap;
+  width: 700px;
+  height: 900px;
+  text-align: center;
+  border-right-style: solid;
+  border-left-style: none;
+  border-width: 7px;
+  border-color: var(--main-border-color);
+  margin: 0px;
+  background-color: var(--main-bg-color);
+  color: var(--main-font-color);
+  font-family: var(--main-font-family);
+}
+
+.logo {
+  margin-left: -300px;
+  margin-bottom: 0;
+  position: absolute;
+
+}
+
+h1 {
+  font-size: 32px;
+  padding-top: 25px;
+  color: var(--main-font-color);
+  font-family: var(--header-font-family);
+}
+
+p {
+  color: var(--main-font-color);
+}
+
+a {
+ color: var(--main-link-color);
+}
+.svg-inline--fa {
+  color: var(--main-font-color);
+}
+
+.svg-inline--fa:hover {
+ color: var(--main-link-color);
+}
+
+.headlines {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.header {
+  background:var(--main-header-bg-color);
+  position: fixed;
+  width: 100%;
+  margin-top: -10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom-color:var(--main-border-color);
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+}
+
+.switch {
+  float: right;
+}
+
+table {
+  margin-top: 110px;
+  font-size: 1rem;
+  color: var(--main-font-color);
+}
+
+
+
+button {
+  background-color: var(--main-button-bg-color);
+  border-color: var(--main-border-color);
+  height: 30px;
+  width: 120px;
+  border-radius: 2rem;
+  border-width: 4px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  color: var(--main-font-color);
+  font-size: 10px;
+}
+
+button:hover {
+  background-color:#00327b;
+}
+
+th {
+  background-color: white;
+  color: #5363FF;
+}
+
+tr {
+  background-color: #010b44;
+}
+
+table {
+  width: 100%;
+  margin-left: -1rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+
+.table .status_head,.table .status_body {
+  padding: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+
+article {
+  display: inline-block;
+}
+
+/**** Issue Generator ****/
+.issues {
+  width: 90%;
+  margin-left: 5%;
+  padding: 1em;
+  margin-bottom: 9rem;
+  border-top: solid;
+}
+
+.issues h3 {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: -0.4rem;
+}
+
+
+.issue_d_1, .issue_d_2 {
+  color: red;
+  margin-left: 2rem;
+}
+
+.issue_h {
+  margin-left: 2rem;
+}
+
+.issue_main {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.issue_head {
+
+}
+
+.issue_body {
+}
+
+.issues p {
+  font-size: 1rem;
+  margin-left: 2rem;
+  word-wrap: break-word;
+  overflow:auto;
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  height: auto;
+  white-space: normal;
+  text-align: left;
+}
+
+/**** Footer ****/
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  position: fixed;
+  background: var(--main-footer-bg-color);
+  border-top-style: solid;
+  border-top-width: 7px;
+  border-top-color: #3541b2;
+  height: 120px;
+  padding-top: 1rem;
+}
+
+
+.redRocket {
+  color: red;
+  text-decoration-line: underline;
+  font-weight: bolder;
+}
+
+.greenThumb {
+  color: green;
+  font-weight: bolder;
+}
+
+.yellowBall {
+  color: yellow;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+/*
+    ____.               __   _________ __                _______                              .__
+    |    |__ __  _______/  |_/   _____//  |______  ___.__.\      \   ___________  _____ _____  |  |
+    |    |  |  \/  ___/\   __\_____  \\   __\__  \<   |  |/   |   \ /  _ \_  __ \/     \\__  \ |  |
+/\__|    |  |  /\___ \  |  | /        \|  |  / __ \\___  /    |    (  <_> )  | \/  Y Y  \/ __ \|  |__
+\________|____//____  > |__|/_______  /|__| (____  / ____\____|__  /\____/|__|  |__|_|  (____  /____/
+  \/              \/           \/\/            \/                   \/     \/
+*/

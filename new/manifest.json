@@ -17,9 +17,9 @@
   },
   "options_page": "src/options_custom/index.html",
   "page_action": {
-    "default_icon": "icons/icon19.png",
+    "default_icon": "icons/icon16.png",
     "default_title": "page action demo",
-    "default_popup": "src/page_action/page_action.html"
+    "default_popup": "popup.html"
   },
   "permissions": [
     "bookmarks",
@@ -36,7 +36,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://google.com/*"
       ],
       "css": [
         "src/inject/inject.css"
@@ -44,7 +44,7 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://google.com/*"
       ],
       "js": [
         "src/inject/inject.js"
