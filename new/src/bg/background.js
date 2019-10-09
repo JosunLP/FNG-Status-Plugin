@@ -1,5 +1,5 @@
-import {TableCreator} from "../../js/class-bundle/TableCreator";
-import {StatusCheck} from "../../js/class-bundle/StatusCheck";
+var TableCreator = new TableCreator();
+var StatusCheck = new StatusCheck();
 
 chrome.extension.onMessage.addListener(
     function (request, sender, sendResponse) {
@@ -8,6 +8,7 @@ chrome.extension.onMessage.addListener(
     });
 
 setInterval(function () {
-    let response = StatusCheck.prototype.callServerStatus("desc");
-    TableCreator.prototype.newTable(response, ".table");
+    TableCreator.deleteTable(".statusTable");
+    let response = StatusCheck.callServerStatus("desc");
+    TableCreator.newTable(response, ".statusTable");
 }, 1000);
