@@ -565,3 +565,5 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/intellij,webstorm,phpstorm,visualstudio,visualstudiocode
+
+.idea
