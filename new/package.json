@@ -1,0 +1,11 @@
+{
+  "name": "fng_status_plugin",
+  "version": "2.0.0",
+  "description": "Ein plugin zum Überprüfen des FearNixx Server Status",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonas Pfalzgraf",
+  "license": "ISC"
+}
