@@ -6,10 +6,9 @@
 
 
 //example of using a message handler from the inject scripts
-import {StatusCheck} from "../../js/class-bundle/StatusCheck";
 
 chrome.extension.onMessage.addListener(
-  function(request, sender, sendResponse) {
-  	chrome.pageAction.show(sender.tab.id);
-    sendResponse();
-  });
+    function (request, sender, sendResponse) {
+        chrome.pageAction.show(sender.tab.id);
+        sendResponse();
+    });

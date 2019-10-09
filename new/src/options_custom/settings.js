@@ -5,7 +5,7 @@ window.addEvent("domready", function () {
             alert("You clicked me!");
         });
     });
-    
+
     // Option 2: Do everything manually:
     /*
     var settings = new FancySettings("My Extension", "icon.png");

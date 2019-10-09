@@ -1,5 +1,4 @@
 // request permission on page load
-import {StatusCheck} from "./class-bundle/StatusCheck";
 
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -12,9 +12,8 @@ this.i18n = {
         "en": "No matches were found.",
         "de": "Keine Übereinstimmungen gefunden."
     },
-    
-    
-    
+
+
     "information": {
         "en": "Information",
         "de": "Information"
@@ -47,7 +46,7 @@ this.i18n = {
         ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et\
         dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.\
         Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-        
+
         "de": "Das ist eine Beschreibung. Du kannst hier beliebigen Text einfügen.<br>\
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut\
         labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores\
