@@ -4,6 +4,10 @@ class StatusCheck {
             return data;
         })
     }
+
+    callServerStatus(mode) {
+        return undefined;
+    }
 }
 
 export {StatusCheck};

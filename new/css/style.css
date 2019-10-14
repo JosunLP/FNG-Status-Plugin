@@ -22,7 +22,6 @@ html {
 
 
 body {
-    margin: 10px;
     white-space: nowrap;
     width: 700px;
     height: 900px;
@@ -31,7 +30,7 @@ body {
     border-left-style: none;
     border-width: 7px;
     border-color: var(--main-border-color);
-    margin: 0px;
+    margin: 0;
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     font-family: var(--main-font-family);
@@ -127,15 +126,13 @@ tr {
 table {
     width: 100%;
     margin-left: -1rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
 .table .status_head, .table .status_body {
-    padding: 0px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px 0;
 }
 
 

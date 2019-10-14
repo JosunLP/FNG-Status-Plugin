@@ -569,3 +569,4 @@ MigrationBackup/
 .idea
 
 node_modules
+package.json
