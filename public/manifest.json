@@ -28,15 +28,13 @@
     },
     "permissions": [
         "bookmarks",
-        "chrome://favicon/",
         "clipboardRead",
         "clipboardWrite",
         "contentSettings",
         "contextMenus",
         "cookies",
         "tabs",
-        "geolocation",
-        "https://fearnixx.de/*"
+        "geolocation"
     ],
     "commands": {
         "_execute_browser_action": {

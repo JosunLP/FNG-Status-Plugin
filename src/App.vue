@@ -1,35 +1,35 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="FNG Status Plugin"/>
-  <Content />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-import Content from './components/Content.vue'
+<script lang="ts">
+import { Options, Vue } from 'vue-class-component';
+import HelloWorld from './components/HelloWorld.vue';
+import Content from './components/Content.vue';
 
-export default {
-  name: 'App',
+@Options({
   components: {
     HelloWorld,
-    Content
-  }
-}
+    Content,
+  },
+})
+export default class App extends Vue {}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin-top: 20px;
-  width: 20rem;
-  min-height: 20rem;
-  scroll-behavior: smooth;
-}
-body {
-  color: #FD9E06;
-  background-color: #1C0100;
-}
+<style lang="sass">
+#app 
+  font-family: Avenir, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-align: center
+  color: #2c3e50
+  margin-top: 1rem
+
+body
+  width: 30rem
+
+html
+  width: 100%
+  height: 100%
 </style>
