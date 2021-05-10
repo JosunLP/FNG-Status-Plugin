@@ -14,6 +14,7 @@ import Content from './components/Content.vue';
     Content,
   },
 })
+
 export default class App extends Vue {}
 </script>
 

@@ -7,68 +7,71 @@ export class App {
     static path_health = "/health"
     static path_data = "/api/services"
     static container = document.getElementById("content")
+    private isOnline: boolean = false;
 
     constructor() {
+        this.uptimeCheck();
         this.main()
     }
 
     async main() {
 
-        while ((await this.uptimeCheck()).online) {
+        while (this.isOnline) {
 
-            const content = await this.apiRequest()
-
-            content.forEach(data => {
-                const item = new HTMLDivElement()
-                item.className = "item"
-
-                const name = new HTMLTitleElement()
-                name.text = data.name;
-                name.className = "item_label"
-
-                const status = new HTMLParagraphElement()
-                if (data.online) {
-                    status.textContent = "Online"
-                    status.className = "item_status_online"
-                } else {
-                    status.textContent = "Offline: " + data.status_code.toString()
-                    status.className = "item_status_offline"
-                }
-
-                item.appendChild(name)
-                item.appendChild(status)
-            });
+            await this.drawData()
+            await this.uptimeCheck();
         }
     }
 
-    async apiRequest(): Promise<Array<APIResponse>> {
+    async drawData(): Promise<void> {
 
-        const response = await window.fetch(App.host + App.path_data, {
+        await fetch(App.host + App.path_data, {
             method: "GET",
             mode: 'cors',
             cache: 'default',
         })
             .then(r => r.json())
-            .then((r) => {
-                return r
-            })
-        const result: Promise<Array<APIResponse>> = response
+            .then((r:Array<APIResponse>) => {
+                r.forEach(data => {
+                    const item = new HTMLDivElement()
+                    item.className = "item"
 
-        return (await result)
+                    const name = new HTMLTitleElement()
+                    name.text = data.name;
+                    name.className = "item_label"
+
+                    const status = new HTMLParagraphElement()
+                    if (data.online) {
+                        status.textContent = "Online"
+                        status.className = "item_status_online"
+                    } else {
+                        status.textContent = "Offline: " + data.status_code.toString()
+                        status.className = "item_status_offline"
+                    }
+
+                    item.appendChild(name)
+                    item.appendChild(status)
+                });
+            })
+            .catch((e) => {
+                this.isOnline = false
+                console.log(e);
+            })
     }
 
-    async uptimeCheck(): Promise<APIHealth> {
-        const response = await window.fetch(App.host + App.path_data, {
+    async uptimeCheck(): Promise<void> {
+        await fetch(App.host + App.path_health, {
             method: "GET",
             mode: 'cors',
             cache: 'default',
         })
             .then(r => r.json())
-            .then((r) => {
-                return r
+            .then((r:APIHealth) => {
+                this.isOnline = r.online
             })
-        const result: Promise<APIHealth> = response
-
-        return (await result)
+            .catch((e) => {
+                this.isOnline = false
+                console.log(e);
+            })
     }
 }

@@ -15,6 +15,7 @@ export default {
 new App()
 
 </script>
+
 <style scoped>
 #content{
     background-color: #59080c;

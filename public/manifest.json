@@ -34,7 +34,8 @@
         "contextMenus",
         "cookies",
         "tabs",
-        "geolocation"
+        "geolocation",
+        "*://*.fearnixx.de/*"
     ],
     "commands": {
         "_execute_browser_action": {
