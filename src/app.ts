@@ -1,9 +1,9 @@
-import { APIHealth } from '../types/APIHealth'
-import { APIResponse } from '../types/APIResponse'
+import { APIHealth } from './types/APIHealth'
+import { APIResponse } from './types/APIResponse'
 
-export class App {
+class App {
 
-    static host = "https://status.fearnixx.de"
+    static host = "https://corsify.de/API.php?apiMode=feed&feedMode=api&dataUrl=https://status.fearnixx.de"
     static path_health = "/health"
     static path_data = "/api/services"
     static container = document.getElementById("content")
@@ -14,7 +14,7 @@ export class App {
         this.main()
     }
 
-    async main() {
+    async main(): Promise<void> {
 
         while (this.isOnline) {
 
@@ -31,7 +31,10 @@ export class App {
             cache: 'default',
         })
             .then(r => r.json())
-            .then((r:Array<APIResponse>) => {
+            .then((r: Array<APIResponse>) => {
+
+                const content = <HTMLDivElement>document.getElementById('content')
+
                 r.forEach(data => {
                     const item = new HTMLDivElement()
                     item.className = "item"
@@ -51,6 +54,7 @@ export class App {
 
                     item.appendChild(name)
                     item.appendChild(status)
+                    content.appendChild(item)
                 });
             })
             .catch((e) => {
@@ -66,7 +70,7 @@ export class App {
             cache: 'default',
         })
             .then(r => r.json())
-            .then((r:APIHealth) => {
+            .then((r: APIHealth) => {
                 this.isOnline = r.online
             })
             .catch((e) => {
@@ -75,3 +79,5 @@ export class App {
             })
     }
 }
+
+new App();
