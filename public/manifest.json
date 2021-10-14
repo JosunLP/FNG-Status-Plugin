@@ -10,10 +10,7 @@
         ],
         "js": [
             "js/app.js",
-            "js/chunk-vendors.js"
-        ],
-        "matches": [
-            "https://fearnixx.de/"
+            "js/classes/APP.js"
         ]
     }],
     "icons": {
@@ -24,7 +21,7 @@
     "action": {
         "default_icon": "icons/icon16.png",
         "default_title": "FNG Status Plugin",
-        "default_popup": "index.html"
+        "default_popup": "popup.html"
     },
     "permissions": [
         "bookmarks",
@@ -34,8 +31,7 @@
         "contextMenus",
         "cookies",
         "tabs",
-        "geolocation",
-        "*://*.fearnixx.de/*"
+        "geolocation"
     ],
     "commands": {
         "_execute_browser_action": {
