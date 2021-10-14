@@ -11,9 +11,6 @@
         "js": [
             "js/app.js",
             "js/classes/APP.js"
-        ],
-        "matches": [
-            "https://fearnixx.de/"
         ]
     }],
     "icons": {

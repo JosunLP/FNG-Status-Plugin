@@ -8,12 +8,16 @@
     "build-css": "sass ./src/sass/:./public/css/"
   },
   "devDependencies": {
-    "typescript": "^4.2.4",
-    "sass": "^1.39.0"
+    "@types/bootstrap": "^5.1.6",
+    "sass": "^1.39.0",
+    "typescript": "^4.2.4"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }

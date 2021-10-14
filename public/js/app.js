@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 class App {
     constructor() {
-        this.isOnline = false;
+        this.isOnline = true;
         this.uptimeCheck();
         this.main();
     }
@@ -31,24 +31,59 @@ class App {
                 .then(r => r.json())
                 .then((r) => {
                 const content = document.getElementById('content');
+                const table = document.createElement('table');
+                const tableHead = document.createElement("thead");
+                const tableBody = document.createElement("tbody");
+                const tableHeadRow = document.createElement("tr");
+                const appName = document.createElement("th");
+                const appStatus = document.createElement("th");
+                const lastEvent = document.createElement("th");
+                table.className = "table";
+                appName.innerText = "Anwendung";
+                appStatus.innerText = "Status";
+                lastEvent.innerText = "Letzter Fehler";
+                tableHeadRow.appendChild(appName);
+                tableHeadRow.appendChild(appStatus);
+                tableHeadRow.appendChild(lastEvent);
+                tableHead.appendChild(tableHeadRow);
+                table.appendChild(tableHead);
+                table.appendChild(tableBody);
+                content.innerHTML = "";
+                content.append(table);
                 r.forEach(data => {
-                    const item = new HTMLDivElement();
-                    item.className = "item";
-                    const name = new HTMLTitleElement();
-                    name.text = data.name;
-                    name.className = "item_label";
-                    const status = new HTMLParagraphElement();
+                    const row = document.createElement("tr");
+                    const link = document.createElement("a");
+                    link.href = "https://status.fearnixx.de/service/" + data.permalink;
+                    link.target = "_blank";
+                    link.innerText = data.name;
+                    const name = document.createElement("td");
+                    name.appendChild(link);
+                    const status = document.createElement("td");
                     if (data.online) {
-                        status.textContent = "Online";
+                        status.innerText = "Online";
                         status.className = "item_status_online";
+                        row.classList.add("bg-success");
                     }
                     else {
-                        status.textContent = "Offline: " + data.status_code.toString();
+                        status.innerText = "Offline: " + data.status_code.toString();
                         status.className = "item_status_offline";
+                        row.classList.add("bg-danger");
                     }
-                    item.appendChild(name);
-                    item.appendChild(status);
-                    content.appendChild(item);
+                    const event = document.createElement("td");
+                    const date = new Date(data.last_error);
+                    const dateStamp = date.getDay() + "." +
+                        date.getMonth() + "." +
+                        date.getFullYear();
+                    if (dateStamp !== "1.0.1") {
+                        event.innerText = dateStamp;
+                    }
+                    else {
+                        event.innerText = "-";
+                    }
+                    row.appendChild(name);
+                    row.appendChild(status);
+                    row.appendChild(event);
+                    tableBody.appendChild(row);
                 });
             })
                 .catch((e) => {
