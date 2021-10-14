@@ -1,0 +1,23 @@
+{
+  "name": "fng_status_plugin",
+  "version": "2.0.0-SNAPSHOT",
+  "private": true,
+  "scripts": {
+    "deploy": "npm run build-js && npm run build-css && sh deploy.sh",
+    "build-js": "tsc",
+    "build-css": "sass ./src/sass/:./public/css/"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.1.6",
+    "sass": "^1.39.0",
+    "typescript": "^4.2.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
