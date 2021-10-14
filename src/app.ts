@@ -41,7 +41,7 @@ class App {
                 const appName = document.createElement("th")
                 const appStatus = document.createElement("th")
                 const lastEvent = document.createElement("th")
-                
+
                 table.className = "table"
                 appName.innerText = "Anwendung"
                 appStatus.innerText = "Status"
@@ -80,9 +80,9 @@ class App {
 
                     const event = document.createElement("td")
                     const date = new Date(data.last_error)
-                    const dateStamp = date.getDay() + "." + 
-                                        date.getMonth() + "." + 
-                                        date.getFullYear()
+                    const dateStamp = date.getDay() + "." +
+                        date.getMonth() + "." +
+                        date.getFullYear()
                     if (dateStamp !== "1.0.1") {
                         event.innerText = dateStamp
                     } else {
