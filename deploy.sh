@@ -1,4 +1,4 @@
-DEPLOY_TARGET=./dist
+DEPLOY_TARGET=./fng_status_plugin
 
 rm -rf $DEPLOY_TARGET
 mkdir -p $DEPLOY_TARGET
