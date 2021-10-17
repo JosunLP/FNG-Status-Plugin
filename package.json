@@ -1,6 +1,6 @@
 {
   "name": "fng_status_plugin",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "deploy": "npm run build-js && npm run build-css && sh deploy.sh",
