@@ -1,6 +1,6 @@
 # __FearNixx Status Plugin__
 
-## Version 2.2.1
+## Version 2.2.2
 
 [![CodeFactor](https://www.codefactor.io/repository/github/josunlp/fng-status-plugin/badge)](https://www.codefactor.io/repository/github/josunlp/fng-status-plugin)
 

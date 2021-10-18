@@ -41,11 +41,13 @@ class Background {
                             }
                         }
                     })
+                    this.serviceStatusInit()
                 });
             })
     }
 
     async serviceStatusInit(): Promise<void> {
+        this.server = []
         await fetch(Background.host + Background.path_data, {
             method: "GET",
             mode: 'cors',
