@@ -1,7 +1,7 @@
 {
     "name": "FNG Status Plugin",
     "version": "2.2.2",
-    "manifest_version": 3,
+    "manifest_version": 2,
     "description": "A Extension created for the FearNixx Community to monitor the uptime status.",
     "homepage_url": "https://github.com/JosunLP/fng_status_plugin",
     "icons": {
@@ -9,7 +9,7 @@
         "48": "icons/icon48.png",
         "128": "icons/icon128.png"
     },
-    "action": {
+    "browser_action": {
         "default_icon": "icons/icon16.png",
         "default_title": "FNG Status Plugin",
         "default_popup": "popup.html"
@@ -18,7 +18,12 @@
         "notifications"
     ],
     "background": {
-        "service_worker": "js/background.js"
+        "scripts": ["js/background.js"]
+      },
+      "applications": {
+        "gecko": {
+          "id": "fng-status-plugin@josunlp.de"
+        }
       },
     "commands": {
         "_execute_browser_action": {
