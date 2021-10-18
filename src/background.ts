@@ -38,6 +38,7 @@ class Background {
                         if (cElement.id === c.id) {
                             if (cElement.online !== c.online) {
                                 this.notification(c.name, c.online, c.permalink)
+                                this.serviceStatusInit()
                             }
                         }
                     })
@@ -46,6 +47,7 @@ class Background {
     }
 
     async serviceStatusInit(): Promise<void> {
+        this.server = []
         await fetch(Background.host + Background.path_data, {
             method: "GET",
             mode: 'cors',
