@@ -25,3 +25,6 @@ pnpm-debug.log*
 package-lock.json
 
 fng_status_plugin
+
+./public/css
+./public/js
