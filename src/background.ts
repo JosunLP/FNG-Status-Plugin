@@ -37,7 +37,7 @@ class Background {
                     d.forEach(c => {
                         if (cElement.id === c.id) {
                             if (cElement.online !== c.online) {
-                                this.notification(c.name, c.online)
+                                this.notification(c.name, c.online, c.permalink)
                             }
                         }
                     })
@@ -76,7 +76,7 @@ class Background {
             })
     }
 
-    async notification(server: string, status: boolean): Promise<void> {
+    async notification(server: string, status: boolean, link: string): Promise<void> {
 
         switch (status) {
             case true:
@@ -84,6 +84,11 @@ class Background {
                     icon: "./icons/good.png",
                     body: "Der Server " + server + " ist jetzt online!"
                 })
+                
+                good.onclick = () => {
+                    window.open(link)
+                }
+
                 console.log("The server status of " + server + " changed to " + status);
                 break;
 
@@ -92,6 +97,11 @@ class Background {
                     icon: "./icons/bad.png",
                     body: "Der Server " + server + " ist jetzt offline!"
                 })
+
+                bad.onclick = () => {
+                    window.open(link)
+                }
+
                 console.log("The server status of " + server + " changed to " + status);
                 break;
 
