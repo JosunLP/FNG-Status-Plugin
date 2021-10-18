@@ -38,10 +38,10 @@ class Background {
                         if (cElement.id === c.id) {
                             if (cElement.online !== c.online) {
                                 this.notification(c.name, c.online, c.permalink)
-                                this.serviceStatusInit()
                             }
                         }
                     })
+                    this.serviceStatusInit()
                 });
             })
     }
