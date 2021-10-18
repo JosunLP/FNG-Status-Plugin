@@ -57,7 +57,7 @@ class Background {
                     this.server.push(e)
                 })
             })
-        console.log("Service status init.");  
+        console.log("Service status init.");
     }
 
     async uptimeCheck(): Promise<void> {
@@ -84,7 +84,7 @@ class Background {
                     icon: "./icons/good.png",
                     body: "Der Server " + server + " ist jetzt online!"
                 })
-                console.log("The server status of " + server + " changed to " + status);                
+                console.log("The server status of " + server + " changed to " + status);
                 break;
 
             case false:
@@ -92,7 +92,7 @@ class Background {
                     icon: "./icons/bad.png",
                     body: "Der Server " + server + " ist jetzt offline!"
                 })
-                console.log("The server status of " + server + " changed to " + status);  
+                console.log("The server status of " + server + " changed to " + status);
                 break;
 
             default:
