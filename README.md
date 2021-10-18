@@ -2,7 +2,7 @@
 
 ## Version 2.0.1
 
-[![CodeFactor](https://www.codefactor.io/repository/github/josunlp/fng_status_plugin/badge)](https://www.codefactor.io/repository/github/josunlp/fng_status_plugin)
+[![CodeFactor](https://www.codefactor.io/repository/github/josunlp/fng-status-plugin/badge)](https://www.codefactor.io/repository/github/josunlp/fng-status-plugin)
 
 --------------------------------------------------------------------------------
 
