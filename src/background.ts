@@ -46,7 +46,7 @@ class Background {
                                 this.notification(c.name, c.online, c.permalink)
                             }
                         }
-                    })                    
+                    })
                 })
                 this.serviceStatusInit()
             })
