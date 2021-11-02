@@ -21,8 +21,14 @@ class Background {
 
         while (this.isOnline) {
 
-            await this.uptimeCheck();
+            await this.serviceStatusCheck()
+            await this.sleep(10000)
+            await this.uptimeCheck()
         }
+    }
+
+    async sleep(ms: number) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     async serviceStatusCheck(): Promise<void> {
@@ -41,8 +47,8 @@ class Background {
                             }
                         }
                     })
-                    this.serviceStatusInit()
-                });
+                })
+                this.serviceStatusInit()
             })
     }
 
@@ -59,7 +65,6 @@ class Background {
                     this.server.push(e)
                 })
             })
-        console.log("Service status init.");
     }
 
     async uptimeCheck(): Promise<void> {
@@ -78,7 +83,7 @@ class Background {
             })
     }
 
-    async notification(server: string, status: boolean, link: string): Promise<void> {
+    notification(server: string, status: boolean, link: string): void {
 
         switch (status) {
             case true:
