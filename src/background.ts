@@ -22,8 +22,8 @@ class Background {
         while (this.isOnline) {
 
             await this.serviceStatusCheck()
+            await this.sleep(10000)
             await this.uptimeCheck()
-            await this.sleep(2000)
         }
     }
 
@@ -46,9 +46,9 @@ class Background {
                                 this.notification(c.name, c.online, c.permalink)
                             }
                         }
-                    })
-                    this.serviceStatusInit()
-                });
+                    })                    
+                })
+                this.serviceStatusInit()
             })
     }
 
@@ -65,7 +65,6 @@ class Background {
                     this.server.push(e)
                 })
             })
-        console.log("Service status init.");
     }
 
     async uptimeCheck(): Promise<void> {
@@ -84,7 +83,7 @@ class Background {
             })
     }
 
-    async notification(server: string, status: boolean, link: string): Promise<void> {
+    notification(server: string, status: boolean, link: string): void {
 
         switch (status) {
             case true:
