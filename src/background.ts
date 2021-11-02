@@ -21,8 +21,14 @@ class Background {
 
         while (this.isOnline) {
 
-            await this.uptimeCheck();
+            await this.serviceStatusCheck()
+            await this.uptimeCheck()
+            await this.sleep(2000)
         }
+    }
+
+    async sleep(ms: number) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     async serviceStatusCheck(): Promise<void> {
