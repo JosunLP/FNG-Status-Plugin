@@ -3,7 +3,7 @@
   "version": "2.2.4",
   "private": true,
   "scripts": {
-    "deploy": "npm run build-js && npm run build-css && sh deploy.sh",
+    "deploy": "npm run build-js && npm run build-css && node ./tools/deploy.js",
     "build-js": "tsc",
     "build-css": "sass ./src/sass/:./public/css/"
   },
