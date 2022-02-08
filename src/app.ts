@@ -19,7 +19,8 @@ class App {
         while (this.isOnline) {
 
             await this.drawData()
-            await this.uptimeCheck();
+            await this.sleep(10000)
+            await this.uptimeCheck()
         }
     }
 
@@ -80,9 +81,7 @@ class App {
 
                     const event = document.createElement("td")
                     const date = new Date(data.last_error)
-                    const dateStamp = date.getDay() + "." +
-                        date.getMonth() + "." +
-                        date.getFullYear()
+                    const dateStamp = date.getDate() + "." + (date.getMonth() + 1) + "." + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes()
                     if (dateStamp !== "1.0.1") {
                         event.innerText = dateStamp
                     } else {
@@ -115,6 +114,10 @@ class App {
                 this.isOnline = false
                 console.log(e);
             })
+    }
+
+    async sleep(ms: number) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 }
 
