@@ -5,17 +5,17 @@ var DEPLOY_TARGET = "./fng_status_plugin";
 
 function deleteFolderRecursive(path) {
   if (fs.existsSync(path)) {
-    fs.readdirSync(path).forEach(function(file, index) {
+    fs.readdirSync(path).forEach(function(file) {
       var curPath = path + "/" + file;
-      if (fs.lstatSync(curPath).isDirectory()) { // recurse
+      if (fs.lstatSync(curPath).isDirectory()) {
         deleteFolderRecursive(curPath);
-      } else { // delete file
+      } else {
         fs.unlinkSync(curPath);
       }
     });
     fs.rmdirSync(path);
   }
-};
+}
 
 function mkdirSync(path) {
   try {
@@ -23,7 +23,7 @@ function mkdirSync(path) {
   } catch(e) {
     if ( e.code != 'EEXIST' ) throw e;
   }
-};
+}
 
 function copyFiles(source, target) {
   var files = fs.readdirSync(source);
@@ -38,7 +38,7 @@ function copyFiles(source, target) {
       fs.writeFileSync(targetFile, fs.readFileSync(sourceFile));
     }
   });
-};
+}
 
 deleteFolderRecursive(DEPLOY_TARGET);
 mkdirSync(DEPLOY_TARGET);
